@@ -15,7 +15,7 @@ title = ['I “only” use R for descriptive stats — and that’s OK',
          "RegexOne",
          "R for Data Science",
          "Introduction to Probability for Data Science",
-         "I'm something of a painter myself",
+         "Monet CycleGAN Tutorial",
             ]
 authors =["David Keyes",
           "Rishabh Anand",
@@ -32,7 +32,7 @@ authors =["David Keyes",
           "RegexOne",
           ["Hadley Wickham","Garrett Grolemund"],
           "Stanley H. Chan",
-          "Kaggle"
+          "Amy Jang"
             ]
 date = ["03-12-2018",
         "30-06-2021",
@@ -66,7 +66,7 @@ link = ["https://rfortherestofus.com/2018/12/descriptive-stats-r/",
         "https://regexone.com/",
         "https://r4ds.had.co.nz/",
         "https://probability4datascience.com/",
-        "https://www.kaggle.com/c/gan-getting-started"
+        "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial"
             ]
 language = ["R",
             "Python",
@@ -81,8 +81,9 @@ language = ["R",
             "Python",
             "Git",
             "Regex",
+            "R",
             ["MATLAB","Python","Julia","R"],
-            "-",
+            "Python",
             ]
 keywords = [["descriptive statistics","statistics","blog"],
             ["machine learning","algorithms","models"],
@@ -99,7 +100,7 @@ keywords = [["descriptive statistics","statistics","blog"],
             ["nlp","text","interactive","language"],
             ["data science", "project structures","rmarkdown","tidy data","tidyverse"],
             ["data science","statistics","probability","distributions","regression"],
-            ["gan","machine learning","neural network","data science","competition"],
+            ["gan","machine learning","tensorflow","keras","data science","competition"],
             ]
 content_type = ["blog",
                 "guide",
@@ -116,7 +117,7 @@ content_type = ["blog",
                 "tutorial",
                 "book",
                 "book",
-                "competition",
+                "tutorial",
                 ]
 comments = ["Useful blog for a variety of Rstats users",
             "General guide for understanding machine learning and some maths behind it",
@@ -133,7 +134,7 @@ comments = ["Useful blog for a variety of Rstats users",
             "interactive online tutorial to learn regex basics",
             "book to learn data science with R following industry best practices",
             "book covering different introductory probability methods including hypothesis testing and different distributions",
-            "kaggle competition testing knowledge of GANs",
+            "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
             ]
 information_density = [3,
                        7,
@@ -150,21 +151,6 @@ information_density = [3,
                        5,
                        9,
                        10,
-                       1,
+                       10,
                        ]
 
-##for i,name in enumerate(title):
- #   print(i)
-
-# Data to be written
-dictionary ={
-    "name" : "sathiyajith",
-    "rollno" : 56,
-    "cgpa" : 8.6,
-    "phonenumber" : "9976770500"
-}
-  
-#with open("sample.json", "w") as outfile:
-#    json.dump(dictionary, outfile)
-
-print("Hello")
