@@ -15,7 +15,7 @@ def run():
         } for a,b,c,d,e,f,g,h,i in zip(title, authors, date, link, language,
         keywords, content_type, comments, information_density)]
 
-    with open("guides.json", "w") as outfile:
+    with open("../project_code/guides.json", "w") as outfile:
         json.dump(data, outfile, indent=4)
 
 

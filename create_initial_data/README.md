@@ -1,2 +1,2 @@
-### TITLE
-main.py contains code to create a JSON from the lists defined in start_lists.py.
+### Creating the Data
+start_lists.py contains several lists which are used as a starting point for guides.json. main.py used `json` to create a json from these lists, which form the basis of the MongoDB database.
