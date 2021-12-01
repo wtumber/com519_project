@@ -1,7 +1,7 @@
 [
     {
         "title": "I \u201conly\u201d use R for descriptive stats \u2014 and that\u2019s OK",
-        "author(s)": "David Keyes",
+        "author": "David Keyes",
         "published_date": "03-12-2018",
         "link": "https://rfortherestofus.com/2018/12/descriptive-stats-r/",
         "coding_language": "R",
@@ -16,7 +16,7 @@
     },
     {
         "title": "Machine Learning Bites",
-        "author(s)": "Rishabh Anand",
+        "author": "Rishabh Anand",
         "published_date": "30-06-2021",
         "link": "https://www.notion.so/Machine-Learning-Bites-7c1675ecb587451e9caf793c68972276",
         "coding_language": "Python",
@@ -31,7 +31,7 @@
     },
     {
         "title": "Cookiecutter Data Science",
-        "author(s)": "-",
+        "author": "-",
         "published_date": "-",
         "link": "https://drivendata.github.io/cookiecutter-data-science/#cookiecutter-data-science",
         "coding_language": "Python",
@@ -46,7 +46,7 @@
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
-        "author(s)": "Brandon Morgan",
+        "author": "Brandon Morgan",
         "published_date": "15-11-2021",
         "link": "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f",
         "coding_language": "Python",
@@ -61,7 +61,7 @@
     },
     {
         "title": "Ultimate R Cheat Sheet",
-        "author(s)": "-",
+        "author": "-",
         "published_date": "-",
         "link": "https://www.business-science.io/r-cheatsheet.html?utm_content=buffer74613&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
         "coding_language": "R",
@@ -78,7 +78,7 @@
     },
     {
         "title": "Setting Up a New Project",
-        "author(s)": "Greg Wilson",
+        "author": "Greg Wilson",
         "published_date": "15-11-2021",
         "link": "https://third-bit.com/2021/11/15/setting-up-a-new-project/",
         "coding_language": "Python",
@@ -94,7 +94,7 @@
     },
     {
         "title": "TensorFlow Examples",
-        "author(s)": "many",
+        "author": "many",
         "published_date": "-",
         "link": "https://github.com/aymericdamien/TensorFlow-Examples",
         "coding_language": "Python",
@@ -110,7 +110,7 @@
     },
     {
         "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
-        "author(s)": "Insane",
+        "author": "Insane",
         "published_date": "28-01-2021",
         "link": "https://www.theinsaneapp.com/2020/12/machine-learning-and-data-science-cheat-sheets-pdf.html",
         "coding_language": "Python",
@@ -126,7 +126,7 @@
     },
     {
         "title": "ML-For-Beginners",
-        "author(s)": "microsoft",
+        "author": "microsoft",
         "published_date": "-",
         "link": "https://github.dev/microsoft/ML-For-Beginners",
         "coding_language": "Python",
@@ -144,7 +144,7 @@
     },
     {
         "title": "Python resources for everybody",
-        "author(s)": "-",
+        "author": "-",
         "published_date": "-",
         "link": "https://learnbyexample.github.io/py_resources/",
         "coding_language": "Python",
@@ -159,7 +159,7 @@
     },
     {
         "title": "Python Data Science Handbook",
-        "author(s)": "Jake VanderPlas",
+        "author": "Jake VanderPlas",
         "published_date": "-",
         "link": "https://jakevdp.github.io/PythonDataScienceHandbook/",
         "coding_language": "Python",
@@ -176,7 +176,7 @@
     },
     {
         "title": "Learn Git Branching",
-        "author(s)": "-",
+        "author": "-",
         "published_date": "-",
         "link": "https://learngitbranching.js.org/",
         "coding_language": "Git",
@@ -191,7 +191,7 @@
     },
     {
         "title": "RegexOne",
-        "author(s)": "RegexOne",
+        "author": "RegexOne",
         "published_date": "-",
         "link": "https://regexone.com/",
         "coding_language": "Regex",
@@ -207,18 +207,13 @@
     },
     {
         "title": "R for Data Science",
-        "author(s)": [
+        "author": [
             "Hadley Wickham",
             "Garrett Grolemund"
         ],
         "published_date": "-",
         "link": "https://r4ds.had.co.nz/",
-        "coding_language": [
-            "MATLAB",
-            "Python",
-            "Julia",
-            "R"
-        ],
+        "coding_language": "R",
         "keywords": [
             "data science",
             "project structures",
@@ -232,10 +227,15 @@
     },
     {
         "title": "Introduction to Probability for Data Science",
-        "author(s)": "Stanley H. Chan",
+        "author": "Stanley H. Chan",
         "published_date": "20-10-2021",
         "link": "https://probability4datascience.com/",
-        "coding_language": "-",
+        "coding_language": [
+            "MATLAB",
+            "Python",
+            "Julia",
+            "R"
+        ],
         "keywords": [
             "data science",
             "statistics",
@@ -245,6 +245,24 @@
         ],
         "content_type": "book",
         "summary": "book covering different introductory probability methods including hypothesis testing and different distributions",
+        "difficulty": 10
+    },
+    {
+        "title": "Monet CycleGAN Tutorial",
+        "author": "Amy Jang",
+        "published_date": "-",
+        "link": "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial",
+        "coding_language": "Python",
+        "keywords": [
+            "gan",
+            "machine learning",
+            "tensorflow",
+            "keras",
+            "data science",
+            "competition"
+        ],
+        "content_type": "tutorial",
+        "summary": "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
         "difficulty": 10
     }
 ]
