@@ -8,3 +8,5 @@ exports.list = async (req, res) => {
       res.status(404).send({ message: "could not list guides" });
     }
   };
+
+/* Add ability to delete, update, */

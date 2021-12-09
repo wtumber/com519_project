@@ -45,12 +45,40 @@
                 <th>Language</th>
                 <th>Summary</th>
             </tr>
+            <% guides.forEach(guide => { %>
             <tr>
-                <th> <%= guides[0].title %></th>
-                <th> <%= guides[0].author %></th>
-                <th> <%= guides[0].coding_language %></th>
-                <th> <%= guides[0].summary %></th>
+                <td> <%= guide.title %></td>
+                <td> <%= guide.author %></td>
+                <td> <%= guide.coding_language %></td>
+                <td> <%= guide.summary %></td>
+                <td class="text-center">
+                  <div class="dropdown">
+                    <button id="dLabel" type="btn-default dropdown-toggle" 
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions<span class="caret"></span> </button>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      <li><a href="#">More details</a></li>
+                      <% if(user) { %>
+                      <li><a href="#">Review this resource</a></li>
+                      <li><a href="#">Update this resource</a></li>
+                      <li><a href="/guides/delete/<%= guides.id %>">Remove this resource</a></li>
+                      <%}%> <% if(!user) { %>
+                        <li class="disabled"><a  href="#">Review this resource</a></li>
+                        <li class="disabled"><a  href="#">Update this resource</a></li>
+                        <li class="disabled"><a href="/guides/delete/<%= guides.id %>">Remove this resource</a></li>
+                      <% } %>
+
+                      <!--
+                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-plus"></span>Show all info</a> 
+                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-plus"></span>Review this</a> 
+                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-edit"></span>Update this</a> 
+                      <a  href="/guides/delete/<%= guides.id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove this</a>
+                    -->
+                    </ul>
+                  </div>
+                  
+                </td>
             </tr>
+            <%})%>
         </thead>
     </table> 
 

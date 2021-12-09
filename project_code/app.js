@@ -1,12 +1,11 @@
 require("dotenv").config();
 const express = require("express");
+const expressSession = require("express-session");
+const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-const expressSession = require("express-session");
 const User = require("./models/User");
-
-const app = express();
 app.set("view engine", "ejs");
 
 const { PORT, MONGODB_URI } = process.env;
@@ -15,37 +14,24 @@ const { PORT, MONGODB_URI } = process.env;
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connection.on("error", (err) => {
     console.error(err);
-    console.log("ERROR: Could not connect to mongoDB.");
+    console.log("Not connecting to database.");
     process.exit();
   });
 
 
-/* Controllers*/
+
+/* Controllers - initialize before call*/
 const guidesController = require("./controllers/guides");
 const userController = require("./controllers/user");
+const homeController = require("./controllers/home");
+const recommendersController = require("./controllers/recommenders");
 
 /*Middleware*/
+app.use(express.static(path.join(__dirname, "public")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-
-/*App routes*/
-/*app.get("/", homeController.list);*/
-app.get("/", (req, res) => {
-  res.render("index");
-});
-app.get("/guides",guidesController.list); /*method listed in guides controller - other methods: create, update, deleted*/
-
-
-/* Users */
-app.get("/signup", (req, res) => {
-  res.render('signup', { errors: {} })
-});
-app.post("/signup", userController.create);
-
-
-app.get("/login", (req, res) => {
-  res.render('login', { errors: {} })
-});
-app.post("/login", userController.login);
+app.use(expressSession({ secret: 'foo barr', cookie: { expires: new Date(253402300000000) } }))
 
 
 app.use("*", async (req, res, next) => {
@@ -65,7 +51,36 @@ const authMiddleware = async (req, res, next) => {
   next()
 }
 
-/** app.get("/", homeController.list);**/
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+
+
+/*App routes*/
+
+/* Guides */
+app.get("/guides",guidesController.list); /*method listed in guides controller - other methods: create, update, delete*/
+app.get("/guides/delete/:id");
+app.get("/guides/update/:id");
+app.post("/guides/update/:id");
+/*Add option to duplicate and create same review*/
+
+/* Recommenders - Where user will become a recommender when they write a review  */
+app.get("/recommenders",recommendersController.list);
+
+/* Users */
+app.get("/signup", (req, res) => {
+  res.render('signup', { errors: {} })
+});
+app.post("/signup", userController.create);
+
+
+app.get("/login", (req, res) => {
+  res.render('login', { errors: {} })
+});
+app.post("/login", userController.login);
+
 
 app.get("/logout", async (req, res) => {
   req.session.destroy();
@@ -75,7 +90,7 @@ app.get("/logout", async (req, res) => {
 
 
 
-
+/* Local run app */
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
