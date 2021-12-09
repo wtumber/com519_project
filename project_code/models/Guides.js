@@ -1,15 +1,3 @@
-/* LAYOUT OF GUIDES
-"title": 
-"author(s)": ,
-"published_date": ,
-"link":,
-"coding_language": 
-"keywords": [],
-"content_type": ,
-"summary": ,
-"difficulty": 
-*/
-
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
