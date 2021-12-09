@@ -3,4 +3,5 @@
 2. node seeder
 3. npm run dev
 
-img holds images for the portfolio as well as images which might be used on the site.
+### Notes
+The `img/` directory holds images for the portfolio as well as any images used on the site.

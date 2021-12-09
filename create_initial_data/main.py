@@ -1,19 +1,19 @@
 import json
-from start_lists import title, authors, date, link, language, keywords, content_type, comments, information_density
+from start_lists import *
 
 
 def run():
     data = [{"title":a,
         "author":b,
-        "published_date":c,
-        "link":d,
-        "coding_language":e,
+        "format":c,
+        "description":d,
+        "link":e,
+        "language":f,
         "keywords":f,
-        "content_type":g,
-        "summary":h,
-        "difficulty":i
-        } for a,b,c,d,e,f,g,h,i in zip(title, authors, date, link, language,
-        keywords, content_type, comments, information_density)]
+        "complexity":g,
+        "recommended_by":h,
+        } for a,b,c,d,e,f,g,h,i in zip(title, authors, format, description, link,
+        language, keywords, complexity, recommended_by)]
 
     with open("guides.json", "w") as outfile:
         json.dump(data, outfile, indent=4)
