@@ -3,7 +3,7 @@
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
           <% if(user) { %>
-          <a class="btn btn-sm btn-outline-secondary" href="logout">Log out</a>
+          <a class="btn btn-sm btn-outline-primary" href="logout">Log out</a>
           <% } %> <% if(!user) { %>
             <a class="btn btn-sm btn-outline-secondary" href="login">Log in</a>
             <% } %>
@@ -26,8 +26,8 @@
         <a class="p-2 link-secondary" href="guides">Resources</a>
         <a class="p-2 link-secondary" href="recommenders">See who's recommending</a>
         <% if(user) { %>
-        <a class="p-2 link-secondary" href="add_resource">Make a recommendation</a>
-        <a class="p-2 link-secondary" href="/">See saved resources</a>
+        <a class="p-2 link-secondary text-primary" href="add_resource">Make a recommendation</a>
+        <a class="p-2 link-secondary text-primary" href="/">See saved resources</a>
         <%}%>
       </nav>
     </div>

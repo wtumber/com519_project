@@ -7,6 +7,8 @@ const userSchema = new Schema(
         username: { type: String, required: [true, 'Please create a username.'], unique: true },
         email: { type: String, required: [true, 'Please provide an email address.'], unique: true },
         password: { type: String, required: [true, 'Please create a password.'] },
+        handle: String,
+        aboutme: { type: String,  maxlength: [200, "Please keep this section short."] }
     },
     { timestamps: true }
 );
