@@ -55,6 +55,9 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/search", (req, res) => {
+  res.render("search");
+});
 
 
 /*App routes*/
