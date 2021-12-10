@@ -63,25 +63,24 @@
                 <td class="text-center">
                   <div class="dropdown">
                     <button id="dLabel" type="btn-default dropdown-toggle" class="btn btn-outline-primary"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>...</b><span class="caret"></span> </button>
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                          <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
                     <ul class="dropdown-menu" aria-labelledby="dLabel" style="transform: translate3d(-7px, 38px, 0px) !important; right :0px;">
                       <li><a href="#">More details</a></li>
                       <% if(user) { %>
-                      <li><a href="#">Review this resource</a></li>
+                      <li><a href="#">Review this</a></li>
                       <li><a href="#">Update this resource</a></li>
-                      <li><a href="/guides/delete/<%= guides.id %>">Remove this resource</a></li>
-                      <li class="disabled"><a  href="#">Save this resource</a></li>
+                      <li><a href="/guides/delete/<%= guides.id %>">Remove 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                      </svg></a></li>
+                      <li class="disabled"><a  href="#">Save 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-star-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5zM8.16 4.1a.178.178 0 0 0-.32 0l-.634 1.285a.178.178 0 0 1-.134.098l-1.42.206a.178.178 0 0 0-.098.303L6.58 6.993c.042.041.061.1.051.158L6.39 8.565a.178.178 0 0 0 .258.187l1.27-.668a.178.178 0 0 1 .165 0l1.27.668a.178.178 0 0 0 .257-.187L9.368 7.15a.178.178 0 0 1 .05-.158l1.028-1.001a.178.178 0 0 0-.098-.303l-1.42-.206a.178.178 0 0 1-.134-.098L8.16 4.1z"/>
+                      </svg></a></li>
                       <%}%>                        
-                        <li class="disabled"><a  href="#">Review this resource</a></li>
-                        <li class="disabled"><a  href="#">Update this resource</a></li>
-                        <li class="disabled"><a href="/guides/delete/<%= guides.id %>">Remove this resource</a></li>
-
-                      <!--
-                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-plus"></span>Show all info</a> 
-                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-plus"></span>Review this</a> 
-                      <a class='btn btn-info btn-xs'><span class="glyphicon glyphicon-edit"></span>Update this</a> 
-                      <a  href="/guides/delete/<%= guides.id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Remove this</a>
-                    -->
                     </ul>
                   </div>
                   
