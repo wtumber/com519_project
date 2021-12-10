@@ -5,20 +5,16 @@
           <% if(user) { %>
           <a class="btn btn-sm btn-outline-secondary" href="logout">Log out</a>
           <% } %> <% if(!user) { %>
-          <a class="btn btn-sm btn-outline-secondary" href="login">Log in</a>
-          <a class="btn btn-sm btn-outline-secondary" href="signup">Sign up</a>
-          <% } %>
+            <a class="btn btn-sm btn-outline-secondary" href="login">Log in</a>
+            <% } %>
         </div>
         <div class="col-4 text-center">
-          <a class="blog-header-logo text-dark" href="/">Dambry</a>
+          <a class="blog-header-logo text-dark" style="font-size: 1.75rem !important;" href="/">Dambry</a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search database for...">
-            <div class="input-group-btn">
-              <button class="btn btn-outline-secondary" type="button">Go!</button>
-            </div>
-          </div>
+          <% if(!user) { %>
+            <a class="btn btn-sm btn-outline-secondary" href="signup">Sign up</a>
+            <% } %>
         </div>
       </div>
     </header>
