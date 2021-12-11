@@ -22,6 +22,7 @@ async function main() {
        */
       if (results) {
         db.collection("guides").drop();
+        db.dropDatabase();
       }
   
       const load = loading("Creating collections").start();
@@ -29,9 +30,45 @@ async function main() {
       /* Import json data */
       const data = await fs.readFile(path.join(__dirname, "guides.json"), "utf8");
       await db.collection("guides").insertMany(JSON.parse(data));
+      
+      /* Create new collection using aggregation */
+      const recommendersRef = await db.collection("guides").aggregate([
+        {$group: {
+          _id: "$recommended_by",
+          handle: {$first: "$handle"},
+          aboutme: {$first: "$aboutme"},
+          num_reviews:{$sum:1}
+          }
+        },
+        {$project: {
+          username: "$_id",
+          "_id" : 0,
+          handle: "$handle",
+          num_reviews: "$num_reviews"
+          }
+        }
+      ]);
 
-      /*const recommenders = await db.collection("guides").aggregate([
+      const recommenders = await recommendersRef.toArray();
+      await db.collection("recommenders").insertMany(recommenders);
 
+      /* remove recommenders data from guides */
+
+
+      
+
+
+
+
+
+
+
+
+
+      /*
+      create collections recommenders
+      remove recommenders columns from guides
+      
         db.guides.aggregate([
           {$group: {
               _id: "$recommended_by",

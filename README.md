@@ -29,6 +29,7 @@ guides contains colletions users, guides, and recommenders.
 
 ### Aggregating for recommenders
 
+``` js
 db.guides.aggregate([
   {$group: {
       _id: "$recommended_by",
@@ -46,3 +47,4 @@ db.guides.aggregate([
     },
   {$out:"recommenders"}
 ])
+```

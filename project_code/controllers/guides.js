@@ -9,4 +9,5 @@ exports.list = async (req, res) => {
     }
   };
 
-/* Add ability to delete, update, */
+/* Add ability to delete, update,  list basic, 
+when user == recommended by, allow update, delete, do not allow to write a review of it if already have*/
