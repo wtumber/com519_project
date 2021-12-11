@@ -53,56 +53,19 @@ async function main() {
       await db.collection("recommenders").insertMany(recommenders);
 
       /* remove recommenders data from guides */
-
-
-      
-
-
-
-
-
-
-
-
-
-      /*
-      create collections recommenders
-      remove recommenders columns from guides
-      
-        db.guides.aggregate([
-          {$group: {
-              _id: "$recommended_by",
-              handle: {$first: "$handle"},
-              aboutme: {$first: "$aboutme"},
-              num_reviews:{$sum:1}
-              }
-            },
-          {$project: {
-              username: "$_id",
-              "_id" : 0,
-              handle: "$handle",
-              num_reviews: "$num_reviews"
-              }
-            },
-          {$out:"recommenders"}
-        ])
-
-  */
-      
-
-      
+      await db.collection("guides").updateMany({}, 
+        { $unset: { 
+            handle: "", 
+            aboutme: "" 
+            } 
+        }
+      );
   
-/**
- TODO: create another collection based on grouping - recommenders 
- Group by recommenders, take their username, twitter name (opt), github link (opt),
- keyinterests, specialty
-      
-  
-**/
-  
+
+      /* Database ready*/  
       load.stop();
       console.info(
-        `Collection created...`
+        `Collections created, database ready...`
       );
   
   
