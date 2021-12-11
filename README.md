@@ -24,3 +24,25 @@ I was keen to move away from populating the json as quickly as possible, as it w
 
 ### Databases
 Called guidesDEV and guides.
+guides contains colletions users, guides, and recommenders.
+
+
+### Aggregating for recommenders
+
+db.guides.aggregate([
+  {$group: {
+      _id: "$recommended_by",
+      handle: {$first: "$handle"},
+      aboutme: {$first: "$aboutme"},
+      num_reviews:{$sum:1}
+      }
+    },
+  {$project: {
+      username: "$_id",
+       "_id" : 0,
+       handle: "$handle",
+       num_reviews: "$num_reviews"
+       }
+    },
+  {$out:"recommenders"}
+])

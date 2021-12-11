@@ -2,208 +2,229 @@
     {
         "title": "I \u201conly\u201d use R for descriptive stats \u2014 and that\u2019s OK",
         "author": "David Keyes",
-        "published_date": "03-12-2018",
+        "format": "blog",
+        "description": "Useful blog for a variety of Rstats users",
         "link": "https://rfortherestofus.com/2018/12/descriptive-stats-r/",
-        "coding_language": "R",
-        "keywords": [
-            "descriptive statistics",
+        "language": "R",
+        "key_themes": [
             "statistics",
             "blog"
         ],
-        "content_type": "blog",
-        "summary": "Useful blog for a variety of Rstats users",
-        "difficulty": 3
+        "difficulty": 3,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Machine Learning Bites",
         "author": "Rishabh Anand",
-        "published_date": "30-06-2021",
+        "format": "guide",
+        "description": "General guide for understanding machine learning and some maths behind it",
         "link": "https://www.notion.so/Machine-Learning-Bites-7c1675ecb587451e9caf793c68972276",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "machine learning",
             "algorithms",
             "models"
         ],
-        "content_type": "guide",
-        "summary": "General guide for understanding machine learning and some maths behind it",
-        "difficulty": 7
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Cookiecutter Data Science",
         "author": "-",
-        "published_date": "-",
+        "format": "guide",
+        "description": "guide for organising Python project code",
         "link": "https://drivendata.github.io/cookiecutter-data-science/#cookiecutter-data-science",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "project structures",
             "organising code",
             "project templates"
         ],
-        "content_type": "guide",
-        "summary": "guide for organising Python project code",
-        "difficulty": 7
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
         "author": "Brandon Morgan",
-        "published_date": "15-11-2021",
+        "format": "guide",
+        "description": "Guide relating to many different regressional methods",
         "link": "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "machine learning",
             "regression",
             "learning"
         ],
-        "content_type": "guide",
-        "summary": "Guide relating to many different regressional methods",
-        "difficulty": 8
+        "difficulty": 8,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Ultimate R Cheat Sheet",
         "author": "-",
-        "published_date": "-",
+        "format": "cheat sheets",
+        "description": "compilation of R cheat sheets for data science",
         "link": "https://www.business-science.io/r-cheatsheet.html?utm_content=buffer74613&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
-        "coding_language": "R",
-        "keywords": [
+        "language": "R",
+        "key_themes": [
             "cheat sheet",
-            "data science",
             "shiny",
             "rmarkdown",
             "tidyverse"
         ],
-        "content_type": "cheat sheets",
-        "summary": "compilation of R cheat sheets for data science",
-        "difficulty": 8
+        "difficulty": 8,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Setting Up a New Project",
         "author": "Greg Wilson",
-        "published_date": "15-11-2021",
+        "format": "guide",
+        "description": "step-through guide to initiate python software engineering project",
         "link": "https://third-bit.com/2021/11/15/setting-up-a-new-project/",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "project structures",
             "organising code",
             "project templates",
             "software engineer"
         ],
-        "content_type": "guide",
-        "summary": "step-through guide to initiate python software engineering project",
-        "difficulty": 7
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "TensorFlow Examples",
         "author": "many",
-        "published_date": "-",
+        "format": "tutorial",
+        "description": "collection of jupyter notebook tensorflow tutorials",
         "link": "https://github.com/aymericdamien/TensorFlow-Examples",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "tensorflow",
             "mnist",
             "machine learning",
             "repo"
         ],
-        "content_type": "tutorial",
-        "summary": "collection of jupyter notebook tensorflow tutorials",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
         "author": "Insane",
-        "published_date": "28-01-2021",
+        "format": "cheat sheets",
+        "description": "collection of machine learning cheat sheets",
         "link": "https://www.theinsaneapp.com/2020/12/machine-learning-and-data-science-cheat-sheets-pdf.html",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "cheat sheet",
             "machine learning",
             "scikit-learn",
             "tensorflow"
         ],
-        "content_type": "cheat sheets",
-        "summary": "collection of machine learning cheat sheets",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "ML-For-Beginners",
         "author": "microsoft",
-        "published_date": "-",
+        "format": "tutorial",
+        "description": "interactive github repo for beginner machine learning",
         "link": "https://github.dev/microsoft/ML-For-Beginners",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "machine learning",
-            "data science",
             "beginners",
             "repo",
             "classification",
             "nlp"
         ],
-        "content_type": "tutorial",
-        "summary": "interactive github repo for beginner machine learning",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Python resources for everybody",
         "author": "-",
-        "published_date": "-",
+        "format": "collection",
+        "description": "collection of python resources at many ranges of skill",
         "link": "https://learnbyexample.github.io/py_resources/",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "collection",
-            "data science",
             "computer vision"
         ],
-        "content_type": "collection",
-        "summary": "collection of python resources at many ranges of skill",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Python Data Science Handbook",
         "author": "Jake VanderPlas",
-        "published_date": "-",
+        "format": "book",
+        "description": "book for python data science",
         "link": "https://jakevdp.github.io/PythonDataScienceHandbook/",
-        "coding_language": "Python",
-        "keywords": [
-            "data science",
+        "language": "Python",
+        "key_themes": [
             "numpy",
             "pandas",
             "matplotlib",
             "machine learning"
         ],
-        "content_type": "book",
-        "summary": "book for python data science",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Learn Git Branching",
         "author": "-",
-        "published_date": "-",
+        "format": "tutorial",
+        "description": "interactive online tutorial to learn git branching",
         "link": "https://learngitbranching.js.org/",
-        "coding_language": "Git",
-        "keywords": [
+        "language": "Git",
+        "key_themes": [
             "interactive",
             "git",
             "organising code"
         ],
-        "content_type": "tutorial",
-        "summary": "interactive online tutorial to learn git branching",
-        "difficulty": 5
+        "difficulty": 5,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "RegexOne",
         "author": "RegexOne",
-        "published_date": "-",
+        "format": "tutorial",
+        "description": "interactive online tutorial to learn regex basics",
         "link": "https://regexone.com/",
-        "coding_language": "Regex",
-        "keywords": [
+        "language": "Regex",
+        "key_themes": [
             "nlp",
             "text",
             "interactive",
             "language"
         ],
-        "content_type": "tutorial",
-        "summary": "interactive online tutorial to learn regex basics",
-        "difficulty": 5
+        "difficulty": 5,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "R for Data Science",
@@ -211,58 +232,61 @@
             "Hadley Wickham",
             "Garrett Grolemund"
         ],
-        "published_date": "-",
+        "format": "book",
+        "description": "book to learn data science with R following industry best practices",
         "link": "https://r4ds.had.co.nz/",
-        "coding_language": "R",
-        "keywords": [
-            "data science",
+        "language": "R",
+        "key_themes": [
             "project structures",
             "rmarkdown",
             "tidy data",
             "tidyverse"
         ],
-        "content_type": "book",
-        "summary": "book to learn data science with R following industry best practices",
-        "difficulty": 9
+        "difficulty": 9,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Introduction to Probability for Data Science",
         "author": "Stanley H. Chan",
-        "published_date": "20-10-2021",
+        "format": "book",
+        "description": "book covering different introductory probability methods including hypothesis testing and different distributions",
         "link": "https://probability4datascience.com/",
-        "coding_language": [
+        "language": [
             "MATLAB",
             "Python",
             "Julia",
             "R"
         ],
-        "keywords": [
-            "data science",
+        "key_themes": [
             "statistics",
             "probability",
             "distributions",
             "regression"
         ],
-        "content_type": "book",
-        "summary": "book covering different introductory probability methods including hypothesis testing and different distributions",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     },
     {
         "title": "Monet CycleGAN Tutorial",
         "author": "Amy Jang",
-        "published_date": "-",
+        "format": "tutorial",
+        "description": "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
         "link": "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial",
-        "coding_language": "Python",
-        "keywords": [
+        "language": "Python",
+        "key_themes": [
             "gan",
             "machine learning",
             "tensorflow",
             "keras",
-            "data science",
             "competition"
         ],
-        "content_type": "tutorial",
-        "summary": "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
-        "difficulty": 10
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "handle": "@wtumber",
+        "aboutme": "data analyst and student at Solent University"
     }
 ]

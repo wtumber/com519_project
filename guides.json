@@ -1,6 +1,6 @@
 [
     {
-        "title": "I \u201conly\u201d use R for descriptive stats \u2014 and that\u2019s OK",
+        "title": "I 'only' use R for descriptive stats \u2014 and that's OK",
         "author": "David Keyes",
         "format": "blog",
         "description": "Useful blog for a variety of Rstats users",
@@ -13,7 +13,7 @@
         "difficulty": 3,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Machine Learning Bites",
@@ -30,7 +30,7 @@
         "difficulty": 7,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Cookiecutter Data Science",
@@ -47,7 +47,7 @@
         "difficulty": 7,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
@@ -64,7 +64,7 @@
         "difficulty": 8,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Ultimate R Cheat Sheet",
@@ -82,7 +82,7 @@
         "difficulty": 8,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Setting Up a New Project",
@@ -100,7 +100,7 @@
         "difficulty": 7,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "TensorFlow Examples",
@@ -118,7 +118,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
@@ -136,7 +136,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "ML-For-Beginners",
@@ -155,7 +155,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Python resources for everybody",
@@ -171,7 +171,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Python Data Science Handbook",
@@ -189,7 +189,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Learn Git Branching",
@@ -206,7 +206,7 @@
         "difficulty": 5,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "RegexOne",
@@ -224,7 +224,7 @@
         "difficulty": 5,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "R for Data Science",
@@ -245,7 +245,7 @@
         "difficulty": 9,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Introduction to Probability for Data Science",
@@ -253,12 +253,7 @@
         "format": "book",
         "description": "book covering different introductory probability methods including hypothesis testing and different distributions",
         "link": "https://probability4datascience.com/",
-        "language": [
-            "MATLAB",
-            "Python",
-            "Julia",
-            "R"
-        ],
+        "language": "Multiple",
         "key_themes": [
             "statistics",
             "probability",
@@ -268,7 +263,7 @@
         "difficulty": 10,
         "recommended_by": "wtumber",
         "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "aboutme": "data analyst and student at Solent University."
     },
     {
         "title": "Monet CycleGAN Tutorial",
@@ -285,8 +280,84 @@
             "competition"
         ],
         "difficulty": 10,
-        "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University"
+        "recommended_by": "datascientist",
+        "handle": "@datascientist",
+        "aboutme": "A keystone contributor to Dambry."
+    },
+    {
+        "title": "100+ Free Data Science Books",
+        "author": "Insane",
+        "format": "collection",
+        "description": "Collection of many free data science books",
+        "link": "https://www.theinsaneapp.com/2020/12/free-data-science-books-pdf.html",
+        "language": "Multiple",
+        "key_themes": [
+            "statistics",
+            "nlp",
+            "cleaning",
+            "analysis",
+            "social media"
+        ],
+        "difficulty": 10,
+        "recommended_by": "datascientist",
+        "handle": "@datascientist",
+        "aboutme": "A keystone contributor to Dambry."
+    },
+    {
+        "title": "Julia Data Science",
+        "author": [
+            "Jose Storopoli",
+            " Rik Huijzer",
+            "Lazaro Alonso"
+        ],
+        "format": "book",
+        "description": "book introduction to Julia for data science",
+        "link": "https://juliadatascience.io/",
+        "language": "Julia",
+        "key_themes": [
+            "julia",
+            "introduction",
+            "dataframes",
+            "visualisation"
+        ],
+        "difficulty": 6,
+        "recommended_by": "datascientist",
+        "handle": "@datascientist",
+        "aboutme": "A keystone contributor to Dambry."
+    },
+    {
+        "title": "RegexOne",
+        "author": "RegexOne",
+        "format": "tutorial",
+        "description": "interactive introduction to regex",
+        "link": "https://regexone.com/",
+        "language": "Regex",
+        "key_themes": [
+            "regex",
+            "nlp",
+            "interactive",
+            "beginner"
+        ],
+        "difficulty": 5,
+        "recommended_by": "datascientist",
+        "handle": "@datascientist",
+        "aboutme": "A keystone contributor to Dambry."
+    },
+    {
+        "title": "Complete Guide to Regressional Analysis Using Python",
+        "author": "Brandon Morgan",
+        "format": "guide",
+        "description": "Methods of regressional analysis with Python",
+        "link": "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f",
+        "language": "Python",
+        "key_themes": [
+            "machine learning",
+            "regression",
+            "analysis"
+        ],
+        "difficulty": 7,
+        "recommended_by": "PythonUser1",
+        "handle": "@PythonUser1",
+        "aboutme": "I love PEP8"
     }
 ]

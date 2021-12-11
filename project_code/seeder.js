@@ -16,23 +16,44 @@ async function main() {
       await client.connect();
       const db = client.db();
       const results = await db.collection("guides").find({}).count();
-  
+      
       /**
        * If existing records then delete the current collections
        */
       if (results) {
-        db.dropDatabase();
+        db.collection("guides").drop();
       }
   
       const load = loading("Creating collections").start();
-  
-      /*
-       * Import the JSON data into the database
-       */
-  
-      const data = await fs.readFile(path.join(__dirname, "guides.json"), "utf8");
 
+      /* Import json data */
+      const data = await fs.readFile(path.join(__dirname, "guides.json"), "utf8");
       await db.collection("guides").insertMany(JSON.parse(data));
+
+      /*const recommenders = await db.collection("guides").aggregate([
+
+        db.guides.aggregate([
+          {$group: {
+              _id: "$recommended_by",
+              handle: {$first: "$handle"},
+              aboutme: {$first: "$aboutme"},
+              num_reviews:{$sum:1}
+              }
+            },
+          {$project: {
+              username: "$_id",
+              "_id" : 0,
+              handle: "$handle",
+              num_reviews: "$num_reviews"
+              }
+            },
+          {$out:"recommenders"}
+        ])
+
+  */
+      
+
+      
   
 /**
  TODO: create another collection based on grouping - recommenders 

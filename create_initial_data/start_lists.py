@@ -1,6 +1,4 @@
-import json
-
-title = ['I “only” use R for descriptive stats — and that’s OK',
+title = ["I 'only' use R for descriptive stats — and that's OK",
          "Machine Learning Bites",
          "Cookiecutter Data Science",
          "Complete Guide to Regressional Analysis Using Python",
@@ -16,6 +14,10 @@ title = ['I “only” use R for descriptive stats — and that’s OK',
          "R for Data Science",
          "Introduction to Probability for Data Science",
          "Monet CycleGAN Tutorial",
+         "100+ Free Data Science Books",
+         "Julia Data Science",
+         "RegexOne",
+         "Complete Guide to Regressional Analysis Using Python"
 ]
 
 author =["David Keyes",
@@ -33,7 +35,11 @@ author =["David Keyes",
           "RegexOne",
           ["Hadley Wickham","Garrett Grolemund"],
           "Stanley H. Chan",
-          "Amy Jang"
+          "Amy Jang",
+          "Insane",
+          ["Jose Storopoli"," Rik Huijzer", "Lazaro Alonso"],
+          "RegexOne",
+          "Brandon Morgan",
 ]
 
 format = ["blog",
@@ -52,6 +58,10 @@ format = ["blog",
           "book",
           "book",
           "tutorial",
+          "collection",
+          "book",
+          "tutorial",
+          "guide"
 ]
 
 description = ["Useful blog for a variety of Rstats users",
@@ -70,6 +80,10 @@ description = ["Useful blog for a variety of Rstats users",
             "book to learn data science with R following industry best practices",
             "book covering different introductory probability methods including hypothesis testing and different distributions",
             "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
+            "Collection of many free data science books",
+            "book introduction to Julia for data science",
+            "interactive introduction to regex",
+            "Methods of regressional analysis with Python",
 ]    
 
 link = ["https://rfortherestofus.com/2018/12/descriptive-stats-r/",
@@ -87,7 +101,11 @@ link = ["https://rfortherestofus.com/2018/12/descriptive-stats-r/",
         "https://regexone.com/",
         "https://r4ds.had.co.nz/",
         "https://probability4datascience.com/",
-        "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial"
+        "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial",
+        "https://www.theinsaneapp.com/2020/12/free-data-science-books-pdf.html",
+        "https://juliadatascience.io/",
+        "https://regexone.com/",
+        "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f"
 ]
 
 language = ["R",
@@ -104,8 +122,12 @@ language = ["R",
             "Git",
             "Regex",
             "R",
-            ["MATLAB","Python","Julia","R"],
+            "Multiple",
             "Python",
+            "Multiple",
+            "Julia",
+            "Regex",
+            "Python"
 ]
 
 key_themes = [["statistics","blog"],
@@ -124,6 +146,10 @@ key_themes = [["statistics","blog"],
             [ "project structures","rmarkdown","tidy data","tidyverse"],
             ["statistics","probability","distributions","regression"],
             ["gan","machine learning","tensorflow","keras","competition"],
+            ["statistics","nlp","cleaning","analysis","social media"],
+            ["julia","introduction","dataframes","visualisation"],
+            ["regex","nlp","interactive","beginner"],
+            ["machine learning","regression","analysis"],
 ]
 
 difficulty = [3,
@@ -142,13 +168,17 @@ difficulty = [3,
               9,
               10,
               10,
+              10,
+              6,
+              5,
+              7
 ]
 
-recommended_by = ["wtumber"] * 16
+recommended_by = ["wtumber"] * 15 + ["datascientist"] * 4 + ["PythonUser1"]
 
-handle = ["@wtumber"] * 16
+handle = ["@wtumber"] * 15 + ["@datascientist"] * 4 + ["@PythonUser1"]
 
-aboutme = ["data analyst and student at Solent University"] * 16
+aboutme = ["data analyst and student at Solent University."] * 15 + ["A keystone contributor to Dambry."] * 4 + ["I love PEP8"]
 
 
 
