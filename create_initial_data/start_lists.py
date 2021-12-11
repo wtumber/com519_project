@@ -18,7 +18,7 @@ title = ['I “only” use R for descriptive stats — and that’s OK',
          "Monet CycleGAN Tutorial",
 ]
 
-authors =["David Keyes",
+author =["David Keyes",
           "Rishabh Anand",
           "-",
           "Brandon Morgan",
@@ -108,7 +108,7 @@ language = ["R",
             "Python",
 ]
 
-keywords = [["statistics","blog"],
+key_themes = [["statistics","blog"],
             ["machine learning","algorithms","models"],
             ["project structures","organising code","project templates"],
             ["machine learning","regression","learning"],
@@ -126,7 +126,7 @@ keywords = [["statistics","blog"],
             ["gan","machine learning","tensorflow","keras","competition"],
 ]
 
-complexity = [3,
+difficulty = [3,
               7,
               7,
               8,
@@ -144,22 +144,13 @@ complexity = [3,
               10,
 ]
 
-recommended_by = [
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T",
-  "Will T"
-]
+recommended_by = ["wtumber"] * 16
+
+handle = ["@wtumber"] * 16
+
+aboutme = ["data analyst and student at Solent University"] * 16
+
+
+
+
 
