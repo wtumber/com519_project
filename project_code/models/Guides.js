@@ -5,13 +5,13 @@ const guidesSchema = new Schema(
     {
       title: {type:String, required: [true, 'Please provide a title.']}, /* REQUIRED */
       author: String,
-      published_date: String,
+      format: {type:String, required: [true, 'Please specify the resource type.']},
+      description: { type: String,  maxlength: [200, "Please keep the summary short."] },
       link: String,
-      coding_language: {type:String, required: [true, 'Please specify the guide language.']}, /* REQUIRED */
-      keywords: Array,
-      content_type: String,
-      summary: { type: String,  maxlength: [200, "Please keep the summary short."] },
+      language: {type:String, required: [true, 'Please specify the language.']}, /* REQUIRED */
+      key_themes: Array,
       difficulty: { type: Number, default: 5 },
+      recommended_by: {type:String, required: [true, 'Who recommends this guide?']}, /* REQUIRED */
     },
     { timestamps: true }
   );
