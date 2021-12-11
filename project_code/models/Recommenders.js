@@ -5,6 +5,7 @@ const recommendersSchema = new Schema(
     {
         username: {type:String, required: [true, 'User must have a username.']},
         handle: String,
+        aboutme: String,
         num_reviews: Number,   
     },
     { timestamps: true }
