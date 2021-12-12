@@ -11,7 +11,7 @@ const guideSchema = new Schema(
        /* language: {type:String, required: [true, 'Please specify the language.']},REQUIRED */
       key_themes: Array,
       difficulty: { type: Number, default: 5 },
-       /*recommended_by: {type:String, required: [true, 'Who recommends this guide?']}, REQUIRED */
+      recommended_by: {type:String, required: [true, 'Who recommends this guide?']},
       language: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Language",
@@ -20,7 +20,7 @@ const guideSchema = new Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: "Format"
       },
-      recommended_by: {
+      recommended_by_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Recommender"
       }

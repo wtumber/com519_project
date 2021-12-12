@@ -53,6 +53,15 @@ exports.create = async (req, res) => {
     const recommender = await Recommenders.findById(req.body.recommender_id);
     await Guides.create({
       title: req.body.title,
+      author: req.body.author,
+      format: req.body.format_id,
+      description: req.body.description,
+      link: req.body.link,
+      language: req.body.language_id,
+      key_themes: "",
+      difficulty: req.body.difficulty,
+      recommended_by: recommender.username,
+      recommended_by_id: req.body._id
 
     })
 

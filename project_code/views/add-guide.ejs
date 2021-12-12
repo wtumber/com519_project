@@ -74,7 +74,7 @@
           id="exampleFormControlSelect2">
         
           <% formats.forEach( format => { %>
-          <option value="<%= format._id %>"><%= format._id %></option>
+          <option value="<%= format._id %>"><%= format.name %></option>
           <% }) %>
 
         </select>
@@ -96,13 +96,11 @@
           id="exampleFormControlSelect1">
         
           <% languages.forEach( language => { %>
-          <option value="<%= language._id %>"><%= language.name %></option>
+          <option value="<%= language._id %>"><%= language._id %></option>
           <% }) %>
 
         </select>
       </div>
-
-      
 
       <div class="form-group">
                 <label for="description">Description</label>
@@ -112,6 +110,20 @@
                   id="description"
                   name="description"
                   placeholder="Brief overview of the material, including any key themes"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="recommender">Who's recommmending?</label>
+        <select
+          class="form-control"
+          name="recommender_id"
+          id="exampleFormControlSelect1">
+        
+          <% recommenders.forEach( recommender => { %>
+          <option value="<%= recommender._id %>"><%= recommender.username %></option>
+          <% }) %>
+
+        </select>
       </div>
 
       <div class="form-group">
