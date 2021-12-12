@@ -52,7 +52,7 @@
   
         <% if (errors['title']) { %>
         <p style="color: red"><%= errors['title'].message %></p>
-        <% } %>
+        <% }; %>
 
       </div>
 
@@ -71,11 +71,11 @@
         <select
           class="form-control"
           name="format_id"
-          id="exampleFormControlSelect2">
+          id="exampleFormControlSelect1">
         
-          <% formats.forEach( format => { %>
-          <option value="<%= format._id %>"><%= format.name %></option>
-          <% }) %>
+          <% formats.forEach( thing => { %>
+            <option value="<%= thing._id %>"><%= thing.content_format %></option>
+            <% }) %>
 
         </select>
       </div>

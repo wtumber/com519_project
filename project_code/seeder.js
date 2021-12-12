@@ -70,7 +70,7 @@ async function main() {
 
       const format = await db.collection("guides").aggregate([
         { $group: { _id: "$format" } },
-        { $project: { name: "$_id", "_id": 0 } }
+        { $project: { content_format: "$_id", "_id": 0 } }
       ]).toArray();
       await db.collection("formats").insertMany(format);
 
