@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const formatSchema = new Schema(
     {format: 
-        { type: String, required: [true, 'format is required'] 
+        { type: String, required: [true, 'resource format is required'] 
         },
     },
     { timestamps: true }

@@ -69,7 +69,7 @@ app.get("/guides/delete/:id", guidesController.delete);
 
 
 app.get("/add-guide", guidesController.createView);
-/*app.post("/add-guide", guidesController.create);*/
+app.post("/add-guide", guidesController.create);
 
 
 app.get("/guides/update/:id");

@@ -65,14 +65,14 @@ async function main() {
         { $group: { _id: "$language" } },
         { $project: { name: "$_id", "_id": 0 } }
       ]).toArray();
-      await db.collection("language").insertMany(languages);
+      await db.collection("languages").insertMany(languages);
   
 
       const format = await db.collection("guides").aggregate([
         { $group: { _id: "$format" } },
         { $project: { name: "$_id", "_id": 0 } }
       ]).toArray();
-      await db.collection("format").insertMany(format);
+      await db.collection("formats").insertMany(format);
 
       /* Database ready*/  
       load.stop();

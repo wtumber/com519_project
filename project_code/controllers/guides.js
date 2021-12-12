@@ -1,6 +1,6 @@
 const Guides = require("../models/Guide");
-const Language = require("../models/Language");
-const Format = require("../models/Format");
+const Languages = require("../models/Language");
+const Formats = require("../models/Format");
 const Recommenders = require("../models/Recommender");
 const bodyParser = require("body-parser");
 
@@ -29,14 +29,12 @@ exports.delete = async (req, res) => {
 
 exports.createView = async (req, res) => {
   try {
-    const languages = await Language.find({});
-    const formats = await Format.find({});
+    const languages = await Languages.find({});
+    const formats = await Formats.find({});
     const recommenders = await Recommenders.find({});
-    console.log(languages);
-    console.log(formats);
     res.render("add-guide", {
-      language: languages,
-      format: formats, 
+      languages: languages,
+      formats: formats, 
       recommenders: recommenders,
       errors: {}
     });
@@ -58,7 +56,7 @@ exports.create = async (req, res) => {
 
     })
 
-    res.redirect('/guides/?message=guide has been added')
+    res.redirect('/guides/?message=resource added')
   } catch (e) {
     if (e.errors) {
       res.render('create', { errors: e.errors })
