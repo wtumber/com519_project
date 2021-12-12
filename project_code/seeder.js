@@ -60,6 +60,7 @@ async function main() {
         }
       );
 
+      /* Create languages and format collections */
       const languages = await db.collection("guides").aggregate([
         { $group: { _id: "$language" } },
         { $project: { name: "$_id", "_id": 0 } }

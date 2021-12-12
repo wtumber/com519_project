@@ -12,4 +12,4 @@ const recommenderSchema = new Schema(
   );
 
 
-module.exports = mongoose.model("Recommenders", recommenderSchema);
+module.exports = mongoose.model("Recommender", recommenderSchema);

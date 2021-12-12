@@ -67,13 +67,13 @@ app.get("/guides",guidesController.list); /*method listed in guides controller -
 
 app.get("/guides/delete/:id", guidesController.delete);
 
+
+app.get("/add-guide", guidesController.createView);
+/*app.post("/add-guide", guidesController.create);*/
+
+
 app.get("/guides/update/:id");
 app.post("/guides/update/:id");
-
-app.get("/add-guide", guidesController.adding);
-app.post("/add-guide", guidesController.create);
-
-
 
 /* Recommenders - Where user will become a recommender when they write a review  */
 app.get("/recommenders",recommendersController.list);

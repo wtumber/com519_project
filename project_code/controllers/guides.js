@@ -27,11 +27,32 @@ exports.delete = async (req, res) => {
   }
 };
 
+exports.createView = async (req, res) => {
+  try {
+    const languages = await Language.find({});
+    const formats = await Format.find({});
+    const recommenders = await Recommenders.find({});
+    console.log(languages);
+    console.log(formats);
+    res.render("add-guide", {
+      language: languages,
+      format: formats, 
+      recommenders: recommenders,
+      errors: {}
+    });
+
+  } catch (e) {
+    res.status(404).send({
+      message: `could not generate create data`,
+    });
+  }
+}
+
 
 exports.create = async (req, res) => {
   try {
 
-    const recommender = await Recommender.findById(req.body.recommender_id);
+    const recommender = await Recommenders.findById(req.body.recommender_id);
     await Guides.create({
       title: req.body.title,
 
@@ -49,23 +70,3 @@ exports.create = async (req, res) => {
   }
 }
 
-exports.adding = async (req, res) => {
-  try {
-    const language = await Language.find({});
-    const format = await Format.find({});
-    const recommenders = await Recommenders.find({});
-    console.log(language);
-    console.log(format);
-    res.render("add-guide", {
-      language: language,
-      format: format, 
-      recommenders: recommenders,
-      errors: {}
-    });
-
-  } catch (e) {
-    res.status(404).send({
-      message: `could not generate create data`,
-    });
-  }
-}
