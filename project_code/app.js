@@ -67,8 +67,11 @@ app.get("/guides",guidesController.list); /*method listed in guides controller -
 
 app.get("/guides/delete/:id", guidesController.delete);
 
+app.get("/add-guide",  authMiddleware,guidesController.createView, (req, res) => {
+  res.render("add-guide", { errors: {} });
+});
 
-app.get("/add-guide", guidesController.createView);
+app.get("/add-guide",);
 app.post("/add-guide", guidesController.create);
 
 
