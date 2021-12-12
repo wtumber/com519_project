@@ -85,12 +85,11 @@
                  | 
                 <a href="#" class="link">
                   Save</a>
-                 <%}%>
-                 <% const recommended_name = guide.recommended_by; %> 
-                 <% if(!(userid ===  recommended_name)) { %>
+                 <% if(!(userid ===  guide.recommended_by)) { %>
                  | <a href="/add-guide" class="link">Recommend this</a>
+                 <%}%>
                 <%}%>
-                <% if(userid === recommended_name) { %>  
+                <% if(userid === guide.recommended_by) { %>  
                  | <a href="#" class="link">
                   Edit</a>
                  | <a href="/guides/delete/<%= guide.id %>" class="link">Delete</a>
