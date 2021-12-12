@@ -5,18 +5,18 @@ const guideSchema = new Schema(
     {
       title: {type:String, required: [true, 'Please provide a title.']}, 
       author: String,
-      /*format: {type:String, required: [true, 'Please specify the resource type.']}, REQUIRED */
+      format: {type:String, required: [true, 'Please specify the resource type.']}, 
       description: { type: String,  maxlength: [200, "Please keep the summary short."] },
       link: String,
-       /* language: {type:String, required: [true, 'Please specify the language.']},REQUIRED */
+      language: {type:String, required: [true, 'Please specify the language.']},
       key_themes: Array,
       difficulty: { type: Number, default: 5 },
       recommended_by: {type:String, required: [true, 'Who recommends this guide?']},
-      language: {
+      language_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Language",
       },
-      format: {
+      format_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Format"
       },

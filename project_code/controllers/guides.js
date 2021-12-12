@@ -65,7 +65,7 @@ exports.create = async (req, res) => {
 
     })
 
-    res.redirect('/guides/?message=resource added')
+    res.redirect('/?message=resource added')
   } catch (e) {
     if (e.errors) {
       res.render('create', { errors: e.errors })
