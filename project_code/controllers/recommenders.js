@@ -1,4 +1,4 @@
-const Recommenders = require("../models/Recommenders");
+const Recommenders = require("../models/Recommender");
 
 exports.list = async (req, res) => {
     try {

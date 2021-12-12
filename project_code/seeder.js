@@ -17,11 +17,10 @@ async function main() {
       const db = client.db();
       const results = await db.collection("guides").find({}).count();
       
-      /**
-       * If existing records then delete the current collections
-       */
+      /* If existing records then delete the current collections - for some reason dropDatase() doesn't work*/
       if (results) {
         db.collection("guides").drop();
+        db.collection("recommenders").drop();
         db.dropDatabase();
       }
   
@@ -60,7 +59,19 @@ async function main() {
             } 
         }
       );
+
+      const languages = await db.collection("guides").aggregate([
+        { $group: { _id: "$language" } },
+        { $project: { name: "$_id", "_id": 0 } }
+      ]).toArray();
+      await db.collection("language").insertMany(languages);
   
+
+      const format = await db.collection("guides").aggregate([
+        { $group: { _id: "$format" } },
+        { $project: { name: "$_id", "_id": 0 } }
+      ]).toArray();
+      await db.collection("format").insertMany(format);
 
       /* Database ready*/  
       load.stop();

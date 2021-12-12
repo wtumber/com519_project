@@ -83,16 +83,12 @@
 
         <div class="form-group">
           <label for="handle">add another account name</label>
-          <input type="handle" class="form-control" name="handle" placeholder = "GitHub/Twitter handle"/>
-          <% if (errors['handle']) { %>
-          <p style="color: red"><%= errors['handle'].message %></p>
-          <% } %>
+          <input class="form-control" name="handle" placeholder = "GitHub username or Twitter handle"/>
         </div>
 
         <div class="form-group">
-          <label for="name">About you</label>
+          <label for="aboutme">About you</label>
           <textarea
-            type="aboutme"
             style="height: 6em;"
             class="form-control"
             id="aboutme"

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const guidesSchema = new Schema(
+const guideSchema = new Schema(
     {
       title: {type:String, required: [true, 'Please provide a title.']}, /* REQUIRED */
       author: String,
@@ -17,4 +17,4 @@ const guidesSchema = new Schema(
   );
 
 
-module.exports = mongoose.model("Guides", guidesSchema);
+module.exports = mongoose.model("Guides", guideSchema);

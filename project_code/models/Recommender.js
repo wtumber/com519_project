@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const recommendersSchema = new Schema(
+const recommenderSchema = new Schema(
     {
         username: {type:String, required: [true, 'User must have a username.']},
         handle: String,
@@ -12,4 +12,4 @@ const recommendersSchema = new Schema(
   );
 
 
-module.exports = mongoose.model("Recommenders", recommendersSchema);
+module.exports = mongoose.model("Recommenders", recommenderSchema);

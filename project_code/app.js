@@ -64,10 +64,16 @@ app.get("/search", (req, res) => {
 
 /* Guides */
 app.get("/guides",guidesController.list); /*method listed in guides controller - other methods: create, update, delete*/
-app.get("/guides/delete/:id");
+
+app.get("/guides/delete/:id", guidesController.delete);
+
 app.get("/guides/update/:id");
 app.post("/guides/update/:id");
-/*Add option to duplicate and create same review*/
+
+app.get("/add-guide", guidesController.adding);
+app.post("/add-guide", guidesController.create);
+
+
 
 /* Recommenders - Where user will become a recommender when they write a review  */
 app.get("/recommenders",recommendersController.list);
@@ -78,12 +84,10 @@ app.get("/signup", (req, res) => {
 });
 app.post("/signup", userController.create);
 
-
 app.get("/login", (req, res) => {
   res.render('login', { errors: {} })
 });
 app.post("/login", userController.login);
-
 
 app.get("/logout", async (req, res) => {
   req.session.destroy();
@@ -93,7 +97,7 @@ app.get("/logout", async (req, res) => {
 
 
 
-/* Local run app */
+/* Local app */
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
   });
