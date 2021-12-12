@@ -44,12 +44,27 @@
     </div>
 
     <div class="text-center">
-      <a class="blog-header-logo text-dark"  href="/add_resource"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+        <div class="dropdown" style="margin: 10px;">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Sort
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Newest to oldest</a>
+            <a class="dropdown-item" href="#">Oldest to newest</a>
+            <a class="dropdown-item" href="#">A-Z</a>
+          </div>
+        </div>
+        <% if(user) { %>
+        <a class="btn btn-outline-primary" style="margin-bottom: 10px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
           <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-        </svg></a> |
-      <a class="blog-header-logo text-dark"  href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-funnel-fill" viewBox="0 0 16 16">
-          <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2z"/>
-        </svg></a>
+        </svg>
+           Add resource
+        </a>
+        <% } %>
+
+
     </div>
     
     <div class="row mb-3">
@@ -60,7 +75,7 @@
       <div class="col-md-4">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-primary"><%= guide.author %> | <%= guide.language %></strong>
+              <strong class="d-inline-block mb-2 text-secondary"><%= guide.author %> | <%= guide.language %></strong>
               <h5 class="mb-0"><%= guide.title %></h5>              
               <div class="mb-1 text-muted">Recommended by <i><%= guide.recommended_by %></i></div>
               <p class="card-text mb-auto"><%= guide.description %></p>
@@ -70,12 +85,11 @@
                  | 
                 <a href="#" class="stretched-link">
                   Save</a>
-                <% const recommended_name = guide.recommended_by; %>
-                 <%}%> <% if(!(userid ===  recommended_name)) { %>
-                 | <a href="#" class="stretched-link">Review this</a>
+                 <%}%>
+                 <% const recommended_name = guide.recommended_by; %> 
+                 <% if(!(userid ===  recommended_name)) { %>
+                 | <a href="#" class="stretched-link">Recommend this</a>
                 <%}%>
-
-                <% var recommended_name = guide.recommended_by; %>
                 <% if(userid === recommended_name) { %>  
                  | <a href="#" class="stretched-link">
                   Edit</a>
@@ -89,51 +103,11 @@
         
         <%})%>
 
+        <div class="text-center">
+          <a class="blog-header-logo text-dark" style="font-size: 1.5rem !important;" href="/">show more (+3)</a>
+        </div>
+
     </div>
-<!--
-    <div class="row col-md-8 col-md-offset-2 custyle mx-auto">
-    <table class="table table-striped custab">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Language</th>
-                <th>Summary</th>
-                <th>Actions</th>
-            </tr>
-            <% guides.forEach(guide => { %>
-            <tr>
-                <td> <%= guide.title %></td>
-                <td> <%= guide.author %></td>
-                <td> <%= guide.coding_language %></td>
-                <td> <%= guide.summary %></td>
-                <td class="text-center">
-                  <div class="btn-group dropleft">
-                    <button type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Actions
-                    </button>
-                    <div class="dropdown-menu" style="justify-content:center;text-align: right;padding-right: 10%;">
-                      <li><a href="#">More details</a></li>
-                      <% if(user) { %>
-                      <li><a href="#">Review this</a></li>
-                      <li><a href="#">Make a change</a></li>
-                      <li><a href="/guides/delete/<%= guides.id %>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
-                        </svg>Remove 
-                        </a></li>
-                      <li"><a  href="#">Save 
-                        </a></li>
-                      <%}%>                    
-                    </div>
-                  </div>
-                </td>
-            </tr>
-            <%})%>
-        </thead>
-    </table> 
-    </div>
-    -->
   </main>
     <%- include('common/footer') -%>
 </body>
