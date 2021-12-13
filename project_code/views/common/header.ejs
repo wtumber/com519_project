@@ -5,7 +5,7 @@
             <% if(!user) { %>
               <a class="btn btn-sm btn-outline-secondary" href="signup">Sign up</a>
               <% } %> <% if(user) { %>
-                <a class="btn btn-sm" href="#">(<%= user.username %>)</a>
+                <a class="btn btn-sm" href="#"><b><%= user.username %></b></a>
               <% } %>
         </div>
         <div class="col-4 text-center">

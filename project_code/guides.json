@@ -12,8 +12,7 @@
         ],
         "difficulty": 3,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Machine Learning Bites",
@@ -29,8 +28,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Cookiecutter Data Science",
@@ -46,8 +44,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
@@ -63,8 +60,7 @@
         ],
         "difficulty": 8,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Ultimate R Cheat Sheet",
@@ -81,8 +77,7 @@
         ],
         "difficulty": 8,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Setting Up a New Project",
@@ -99,8 +94,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "TensorFlow Examples",
@@ -117,8 +111,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
@@ -135,8 +128,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "ML-For-Beginners",
@@ -154,8 +146,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Python resources for everybody",
@@ -170,8 +161,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Python Data Science Handbook",
@@ -188,8 +178,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Learn Git Branching",
@@ -205,8 +194,7 @@
         ],
         "difficulty": 5,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "RegexOne",
@@ -223,8 +211,7 @@
         ],
         "difficulty": 5,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "R for Data Science",
@@ -244,8 +231,7 @@
         ],
         "difficulty": 9,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Introduction to Probability for Data Science",
@@ -262,8 +248,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "handle": "@wtumber",
-        "aboutme": "data analyst and student at Solent University."
+        "user_type": "individual"
     },
     {
         "title": "Monet CycleGAN Tutorial",
@@ -280,9 +265,8 @@
             "competition"
         ],
         "difficulty": 10,
-        "recommended_by": "datascientist",
-        "handle": "@datascientist",
-        "aboutme": "A keystone contributor to Dambry."
+        "recommended_by": "datascientists",
+        "user_type": "group"
     },
     {
         "title": "100+ Free Data Science Books",
@@ -299,9 +283,8 @@
             "social media"
         ],
         "difficulty": 10,
-        "recommended_by": "datascientist",
-        "handle": "@datascientist",
-        "aboutme": "A keystone contributor to Dambry."
+        "recommended_by": "datascientists",
+        "user_type": "group"
     },
     {
         "title": "Julia Data Science",
@@ -321,9 +304,8 @@
             "visualisation"
         ],
         "difficulty": 6,
-        "recommended_by": "datascientist",
-        "handle": "@datascientist",
-        "aboutme": "A keystone contributor to Dambry."
+        "recommended_by": "datascientists",
+        "user_type": "group"
     },
     {
         "title": "RegexOne",
@@ -339,9 +321,8 @@
             "beginner"
         ],
         "difficulty": 5,
-        "recommended_by": "datascientist",
-        "handle": "@datascientist",
-        "aboutme": "A keystone contributor to Dambry."
+        "recommended_by": "datascientists",
+        "user_type": "group"
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
@@ -356,8 +337,7 @@
             "analysis"
         ],
         "difficulty": 7,
-        "recommended_by": "PythonUser1",
-        "handle": "@PythonUser1",
-        "aboutme": "I love PEP8"
+        "recommended_by": "PythonUserClub",
+        "user_type": "group"
     }
 ]

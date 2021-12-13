@@ -36,15 +36,14 @@ async function main() {
       const recommendersRef = await db.collection("guides").aggregate([
         {$group: {
           _id: "$recommended_by",
-          handle: {$first: "$handle"},
-          aboutme: {$first: "$aboutme"},
+          recommender_type: {$first: "$user_type"},
           num_reviews:{$sum:1}
           }
         },
         {$project: {
           username: "$_id",
           "_id" : 0,
-          handle: "$handle",
+          recommender_type: "$recommender_type",
           num_reviews: "$num_reviews"
           }
         }

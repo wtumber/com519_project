@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const recommenderSchema = new Schema(
     {
         name: {type:String, required: [true, 'Recommender must have a name.']},
-        type: {type:String, required: [true, 'Is this a person or a group']},
+        recommender_type: {type:String, required: [true, 'Is this a person or a group']},
         num_reviews: Number,   
     },
     { timestamps: true }

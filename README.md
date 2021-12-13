@@ -48,3 +48,6 @@ db.guides.aggregate([
   {$out:"recommenders"}
 ])
 ```
+
+
+use of snake case regularly as opposed to camel case as I am developing in python and R in parallel to this development, and therefore continuously switching languages was a challenge.
