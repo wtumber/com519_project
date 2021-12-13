@@ -74,24 +74,22 @@ app.get("/add-guide", authMiddleware, guidesController.createView, (req, res) =>
 app.post("/add-guide", guidesController.create);
 
 
-app.get("/guides/update/:id");
-app.post("/guides/update/:id");
+app.get("/guides/update/:id", guidesController.edit);
+app.post("/guides/update/:id",guidesController.update);
 
 
 /* Recommenders */
 app.get("/recommenders",recommendersController.list);
 
-/* future routes
-app.get("/add-recommender", authMiddleware, recommenderController.createView, (req, res) => {
+/* future routes */
+app.get("/add-recommender", authMiddleware, recommendersController.createView, (req, res) => {
   res.render("add-recommender", { errors: {} });
 });
-app.post("/add-recommender", recommenderController.create);
 
+app.post("/add-recommender", recommendersController.create);
 
-"/recommenders/join/<%= recommender.id %>"
-app.get("/recommenders/join/:id", recommenderController.addUser);
-
-*/
+/*app.get("/recommenders/join/:id", recommenderController.addUser);*/
+app.get("/user/join/:id", userController.joinGroup);
 
 
 

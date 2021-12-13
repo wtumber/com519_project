@@ -73,9 +73,9 @@
                     <td> <%= recommender.num_reviews %></td>
                     <td> <%= recommender.type %></td>
                     <td> 
-                      <% if(user & !(user.recommender_id)) { %> <!--recommender.type === "group"-->
+                      <% if(user) { %> <!--recommender.type === "group"-->
                       <a class="btn btn-sm btn-outline-primary" 
-                      href="/recommenders/join/<%= recommender.id %>">
+                      href="/user/join/<%= recommender.id %>">
                       Join 
                     </a>
                     <%}%>

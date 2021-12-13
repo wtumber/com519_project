@@ -30,19 +30,23 @@ exports.delete = async (req, res) => {
 exports.create = async (req, res) => {
   try {
 
-    const recommender = await Recommenders.findById(req.body.recommender_id);
+    const recommender = await Recommenders.findById(req.body.recommended_by_id);
+    const format = await Formats.findById(req.body.format_id);
+    const language = await Languages.findById(req.body.language_id);
+
     await Guides.create({
       title: req.body.title,
       author: req.body.author,
-      format: req.body.format_id,
+      format: format.content_format,
       description: req.body.description,
       link: req.body.link,
-      language: req.body.language_id,
+      language: language.name,
       key_themes: "",
       difficulty: req.body.difficulty,
       recommended_by: recommender.username,
-      recommended_by_id: req.body.recommender_id
-
+      format_id: req.body.format_id,
+      language_id: req.body.language_id,
+      recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
     })
     console.log(user.username)
     res.redirect('/?message=resource added')
@@ -83,5 +87,47 @@ exports.createView = async (req, res) => {
 }
 
 
+exports.edit = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const languages = await Languages.find({});
+    const formats = await Formats.find({});
+    const recommenders = await Recommenders.find({});
+    const guide = await Guides.findById(id);
+    if (!guide) throw Error("can't find guide");
+    res.render('update-guide', {
+      languages: languages,
+      formats: formats,
+      recommenders: recommenders,
+      tasters: tasters,
+      id: id,
+      errors: {}
+    });
+  } catch (e) {
+    console.log(e)
+    if (e.errors) {
+      res.render('update-guide', { errors: e.errors })
+      return;
+    }
+    res.status(404).send({
+      message: `can't find guide ${id}`,
+    });
+  }
+};
 
+/* if recommended_by_id does not match
 
+const recommender = await Recommenders.findById(req.body.recommended_by_id);
+ then Guides.create new document */
+
+exports.update = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const taster = await Taster.updateOne({ _id: id }, req.body);
+    res.redirect('/tasters/?message=taster has been updated');
+  } catch (e) {
+    res.status(404).send({
+      message: `could find taster ${id}.`,
+    });
+  }
+};
