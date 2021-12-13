@@ -12,10 +12,9 @@ def run():
         "key_themes":g,
         "difficulty":h,
         "recommended_by":i,
-        "handle":j,
-        "aboutme":k
-        } for a,b,c,d,e,f,g,h,i,j,k in zip(title, author, format, description, link,
-        language, key_themes, difficulty, recommended_by, handle, aboutme)]
+        "user_type": j
+        } for a,b,c,d,e,f,g,h,i,j in zip(title, author, format, description, link,
+        language, key_themes, difficulty, recommended_by, user_type)]
 
     with open("guides.json", "w") as outfile:
         json.dump(data, outfile, indent=4)

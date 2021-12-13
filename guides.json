@@ -1,0 +1,343 @@
+[
+    {
+        "title": "I 'only' use R for descriptive stats \u2014 and that's OK",
+        "author": "David Keyes",
+        "format": "blog",
+        "description": "Useful blog for a variety of Rstats users",
+        "link": "https://rfortherestofus.com/2018/12/descriptive-stats-r/",
+        "language": "R",
+        "key_themes": [
+            "statistics",
+            "blog"
+        ],
+        "difficulty": 3,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Machine Learning Bites",
+        "author": "Rishabh Anand",
+        "format": "guide",
+        "description": "General guide for understanding machine learning and some maths behind it",
+        "link": "https://www.notion.so/Machine-Learning-Bites-7c1675ecb587451e9caf793c68972276",
+        "language": "Python",
+        "key_themes": [
+            "machine learning",
+            "algorithms",
+            "models"
+        ],
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Cookiecutter Data Science",
+        "author": "-",
+        "format": "guide",
+        "description": "guide for organising Python project code",
+        "link": "https://drivendata.github.io/cookiecutter-data-science/#cookiecutter-data-science",
+        "language": "Python",
+        "key_themes": [
+            "project structures",
+            "organising code",
+            "project templates"
+        ],
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Complete Guide to Regressional Analysis Using Python",
+        "author": "Brandon Morgan",
+        "format": "guide",
+        "description": "Guide relating to many different regressional methods",
+        "link": "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f",
+        "language": "Python",
+        "key_themes": [
+            "machine learning",
+            "regression",
+            "learning"
+        ],
+        "difficulty": 8,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Ultimate R Cheat Sheet",
+        "author": "-",
+        "format": "cheat sheets",
+        "description": "compilation of R cheat sheets for data science",
+        "link": "https://www.business-science.io/r-cheatsheet.html?utm_content=buffer74613&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer",
+        "language": "R",
+        "key_themes": [
+            "cheat sheet",
+            "shiny",
+            "rmarkdown",
+            "tidyverse"
+        ],
+        "difficulty": 8,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Setting Up a New Project",
+        "author": "Greg Wilson",
+        "format": "guide",
+        "description": "step-through guide to initiate python software engineering project",
+        "link": "https://third-bit.com/2021/11/15/setting-up-a-new-project/",
+        "language": "Python",
+        "key_themes": [
+            "project structures",
+            "organising code",
+            "project templates",
+            "software engineer"
+        ],
+        "difficulty": 7,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "TensorFlow Examples",
+        "author": "many",
+        "format": "tutorial",
+        "description": "collection of jupyter notebook tensorflow tutorials",
+        "link": "https://github.com/aymericdamien/TensorFlow-Examples",
+        "language": "Python",
+        "key_themes": [
+            "tensorflow",
+            "mnist",
+            "machine learning",
+            "repo"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
+        "author": "Insane",
+        "format": "cheat sheets",
+        "description": "collection of machine learning cheat sheets",
+        "link": "https://www.theinsaneapp.com/2020/12/machine-learning-and-data-science-cheat-sheets-pdf.html",
+        "language": "Python",
+        "key_themes": [
+            "cheat sheet",
+            "machine learning",
+            "scikit-learn",
+            "tensorflow"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "ML-For-Beginners",
+        "author": "microsoft",
+        "format": "tutorial",
+        "description": "interactive github repo for beginner machine learning",
+        "link": "https://github.dev/microsoft/ML-For-Beginners",
+        "language": "Python",
+        "key_themes": [
+            "machine learning",
+            "beginners",
+            "repo",
+            "classification",
+            "nlp"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Python resources for everybody",
+        "author": "-",
+        "format": "collection",
+        "description": "collection of python resources at many ranges of skill",
+        "link": "https://learnbyexample.github.io/py_resources/",
+        "language": "Python",
+        "key_themes": [
+            "collection",
+            "computer vision"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Python Data Science Handbook",
+        "author": "Jake VanderPlas",
+        "format": "book",
+        "description": "book for python data science",
+        "link": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+        "language": "Python",
+        "key_themes": [
+            "numpy",
+            "pandas",
+            "matplotlib",
+            "machine learning"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Learn Git Branching",
+        "author": "-",
+        "format": "tutorial",
+        "description": "interactive online tutorial to learn git branching",
+        "link": "https://learngitbranching.js.org/",
+        "language": "Git",
+        "key_themes": [
+            "interactive",
+            "git",
+            "organising code"
+        ],
+        "difficulty": 5,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "RegexOne",
+        "author": "RegexOne",
+        "format": "tutorial",
+        "description": "interactive online tutorial to learn regex basics",
+        "link": "https://regexone.com/",
+        "language": "Regex",
+        "key_themes": [
+            "nlp",
+            "text",
+            "interactive",
+            "language"
+        ],
+        "difficulty": 5,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "R for Data Science",
+        "author": [
+            "Hadley Wickham",
+            "Garrett Grolemund"
+        ],
+        "format": "book",
+        "description": "book to learn data science with R following industry best practices",
+        "link": "https://r4ds.had.co.nz/",
+        "language": "R",
+        "key_themes": [
+            "project structures",
+            "rmarkdown",
+            "tidy data",
+            "tidyverse"
+        ],
+        "difficulty": 9,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Introduction to Probability for Data Science",
+        "author": "Stanley H. Chan",
+        "format": "book",
+        "description": "book covering different introductory probability methods including hypothesis testing and different distributions",
+        "link": "https://probability4datascience.com/",
+        "language": "Multiple",
+        "key_themes": [
+            "statistics",
+            "probability",
+            "distributions",
+            "regression"
+        ],
+        "difficulty": 10,
+        "recommended_by": "wtumber",
+        "user_type": "individual"
+    },
+    {
+        "title": "Monet CycleGAN Tutorial",
+        "author": "Amy Jang",
+        "format": "tutorial",
+        "description": "Tutorial for using tensorflow and CycleGANS in Python based on a Kaggle competition.",
+        "link": "https://www.kaggle.com/amyjang/monet-cyclegan-tutorial",
+        "language": "Python",
+        "key_themes": [
+            "gan",
+            "machine learning",
+            "tensorflow",
+            "keras",
+            "competition"
+        ],
+        "difficulty": 10,
+        "recommended_by": "datascientists",
+        "user_type": "group"
+    },
+    {
+        "title": "100+ Free Data Science Books",
+        "author": "Insane",
+        "format": "collection",
+        "description": "Collection of many free data science books",
+        "link": "https://www.theinsaneapp.com/2020/12/free-data-science-books-pdf.html",
+        "language": "Multiple",
+        "key_themes": [
+            "statistics",
+            "nlp",
+            "cleaning",
+            "analysis",
+            "social media"
+        ],
+        "difficulty": 10,
+        "recommended_by": "datascientists",
+        "user_type": "group"
+    },
+    {
+        "title": "Julia Data Science",
+        "author": [
+            "Jose Storopoli",
+            " Rik Huijzer",
+            "Lazaro Alonso"
+        ],
+        "format": "book",
+        "description": "book introduction to Julia for data science",
+        "link": "https://juliadatascience.io/",
+        "language": "Julia",
+        "key_themes": [
+            "julia",
+            "introduction",
+            "dataframes",
+            "visualisation"
+        ],
+        "difficulty": 6,
+        "recommended_by": "datascientists",
+        "user_type": "group"
+    },
+    {
+        "title": "RegexOne",
+        "author": "RegexOne",
+        "format": "tutorial",
+        "description": "interactive introduction to regex",
+        "link": "https://regexone.com/",
+        "language": "Regex",
+        "key_themes": [
+            "regex",
+            "nlp",
+            "interactive",
+            "beginner"
+        ],
+        "difficulty": 5,
+        "recommended_by": "datascientists",
+        "user_type": "group"
+    },
+    {
+        "title": "Complete Guide to Regressional Analysis Using Python",
+        "author": "Brandon Morgan",
+        "format": "guide",
+        "description": "Methods of regressional analysis with Python",
+        "link": "https://towardsdatascience.com/complete-guide-to-regressional-analysis-using-python-bbe76b3e451f",
+        "language": "Python",
+        "key_themes": [
+            "machine learning",
+            "regression",
+            "analysis"
+        ],
+        "difficulty": 7,
+        "recommended_by": "PythonUserClub",
+        "user_type": "group"
+    }
+]

@@ -27,6 +27,42 @@ exports.delete = async (req, res) => {
   }
 };
 
+exports.create = async (req, res) => {
+  try {
+
+    const recommender = await Recommenders.findById(req.body.recommender_id);
+    await Guides.create({
+      title: req.body.title,
+      author: req.body.author,
+      format: req.body.format_id,
+      description: req.body.description,
+      link: req.body.link,
+      language: req.body.language_id,
+      key_themes: "",
+      difficulty: req.body.difficulty,
+      recommended_by: recommender.username,
+      recommended_by_id: req.body.recommender_id
+
+    })
+    console.log(user.username)
+    res.redirect('/?message=resource added')
+  } catch (e) {
+    if (e.errors) {
+      const languages = await Languages.find({});
+      const formats = await Formats.find({});
+      const recommenders = await Recommenders.find({});
+      res.render('add-guide', {languages: languages,
+        formats: formats, 
+        recommenders: recommenders, 
+        errors: e.errors })
+      return;
+    }
+    return res.status(400).send({
+      message: JSON.parse(e),
+    });
+  }
+}
+
 exports.createView = async (req, res) => {
   try {
     const languages = await Languages.find({});
@@ -47,33 +83,5 @@ exports.createView = async (req, res) => {
 }
 
 
-exports.create = async (req, res) => {
-  try {
 
-    const recommender = await Recommenders.findById(req.body.recommender_id);
-    await Guides.create({
-      title: req.body.title,
-      author: req.body.author,
-      format: req.body.format_id,
-      description: req.body.description,
-      link: req.body.link,
-      language: req.body.language_id,
-      key_themes: "",
-      difficulty: req.body.difficulty,
-      recommended_by: recommender.username,
-      recommended_by_id: req.body._id
-
-    })
-
-    res.redirect('/?message=resource added')
-  } catch (e) {
-    if (e.errors) {
-      res.render('create', { errors: e.errors })
-      return;
-    }
-    return res.status(400).send({
-      message: JSON.parse(e),
-    });
-  }
-}
 

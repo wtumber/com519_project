@@ -21,6 +21,8 @@ async function main() {
       if (results) {
         db.collection("guides").drop();
         db.collection("recommenders").drop();
+        db.collection("languages").drop();
+        db.collection("formats").drop();
         db.dropDatabase();
       }
   

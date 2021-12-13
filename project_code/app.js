@@ -67,19 +67,33 @@ app.get("/guides",guidesController.list); /*method listed in guides controller -
 
 app.get("/guides/delete/:id", guidesController.delete);
 
-app.get("/add-guide",  authMiddleware,guidesController.createView, (req, res) => {
+app.get("/add-guide", authMiddleware, guidesController.createView, (req, res) => {
   res.render("add-guide", { errors: {} });
 });
 
-app.get("/add-guide",);
 app.post("/add-guide", guidesController.create);
 
 
 app.get("/guides/update/:id");
 app.post("/guides/update/:id");
 
-/* Recommenders - Where user will become a recommender when they write a review  */
+
+/* Recommenders */
 app.get("/recommenders",recommendersController.list);
+
+/* future routes
+app.get("/add-recommender", authMiddleware, recommenderController.createView, (req, res) => {
+  res.render("add-recommender", { errors: {} });
+});
+app.post("/add-recommender", recommenderController.create);
+
+
+"/recommenders/join/<%= recommender.id %>"
+app.get("/recommenders/join/:id", recommenderController.addUser);
+
+*/
+
+
 
 /* Users */
 app.get("/signup", (req, res) => {

@@ -38,25 +38,50 @@
     <%- include('common/header'); -%>
     <main class="container" style="flex: 1 0 auto;">
       <div class="text-center">
-        <p class="blog-header-logo text-dark">Contributors</p>
+        <p class="blog-header-logo text-dark">Recommenders</p>
       </div>
+
+      <div class="text-center">
+        <p class="mb-1 text-muted text-dark">Recommenders are people or groups who contribute to the site.</p>
+      
+      <% if(user) { %>
+        <a href="/add-recommender"class="btn btn-outline-primary" style="margin-bottom: 10px;margin-top:10px">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+        </svg>
+           Create new recommender
+        </a>
+        <% } %>
+      
+      </div>
+
+      
 
 
       <div class="row col-md-8 col-md-offset-2 custyle mx-auto">
         <table class="table table-striped custab">
             <thead>
                 <tr>
-                    <th>Username</th>
-                    <th>GitHub</th>
-                    <th>About me</th>
-                    <th>Reviews</th>
+                    <th>Name</th>
+                    <th>Contributions</th>
+                    <th>Type</th>
+                    <th>Join </th>
                 </tr>
-                <% recommenders.forEach(recommenders => { %>
+                <% recommenders.forEach(recommender => { %>
                 <tr>
-                    <td> <%= recommenders.username %></td>
-                    <td> <%= recommenders.handle %></td>
-                    <td> <%= recommenders.aboutme %></td>
-                    <td> <%= recommenders.num_reviews %></td>
+                    <td> <%= recommender.name %></td>
+                    <td> <%= recommender.num_reviews %></td>
+                    <td> <%= recommender.type %></td>
+                    <td> 
+                      <% if(user) { %> <!--recommender.type === "group"-->
+                      <a class="btn btn-sm btn-outline-primary" 
+                      href="/recommenders/join/<%= recommender.id %>">
+                      Join 
+                    </a>
+                    <%}%>
+
+
+                    </td>
                 </tr>
                 <%})%>
             </thead>

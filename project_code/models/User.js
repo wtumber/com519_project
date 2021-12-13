@@ -10,7 +10,12 @@ const userSchema = new Schema(
                                     minLength: [4, "Password too short."],
                                     maxLength: [14, "Password too long."] },
         handle: String,
-        aboutme: { type: String, maxlength: [200, "Please keep this section short."] }
+        aboutme: { type: String, maxlength: [200, "Please keep this section short."] },
+        recommender_id:
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Recommender"
+          }
     },
     { timestamps: true }
 );

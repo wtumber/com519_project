@@ -3,9 +3,8 @@ const { Schema } = mongoose;
 
 const recommenderSchema = new Schema(
     {
-        username: {type:String, required: [true, 'User must have a username.']},
-        handle: String,
-        aboutme: String,
+        name: {type:String, required: [true, 'Recommender must have a name.']},
+        type: {type:String, required: [true, 'Is this a person or a group']},
         num_reviews: Number,   
     },
     { timestamps: true }
@@ -13,3 +12,6 @@ const recommenderSchema = new Schema(
 
 
 module.exports = mongoose.model("Recommender", recommenderSchema);
+
+/* add a userid -
+ when create if cannot find username in recommenders then create recommedner*/

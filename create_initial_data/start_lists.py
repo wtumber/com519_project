@@ -174,12 +174,9 @@ difficulty = [3,
               7
 ]
 
-recommended_by = ["wtumber"] * 15 + ["datascientist"] * 4 + ["PythonUser1"]
+recommended_by = ["wtumber"] * 15 + ["datascientists"] * 4 + ["PythonUserClub"]
 
-handle = ["@wtumber"] * 15 + ["@datascientist"] * 4 + ["@PythonUser1"]
-
-aboutme = ["data analyst and student at Solent University."] * 15 + ["A keystone contributor to Dambry."] * 4 + ["I love PEP8"]
-
+user_type = ["individual"] * 15 + ["group"] * 4 + ["group"]
 
 
 

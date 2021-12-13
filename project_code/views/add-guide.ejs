@@ -52,7 +52,7 @@
   
         <% if (errors['title']) { %>
         <p style="color: red"><%= errors['title'].message %></p>
-        <% }; %>
+        <% } %>
 
       </div>
 
@@ -74,7 +74,7 @@
           id="exampleFormControlSelect1">
         
           <% formats.forEach( thing => { %>
-            <option value="<%= thing._id %>"><%= thing.content_format %></option>
+            <option value="<%= thing._id %>"><%= thing['content_format'] %></option>
             <% }) %>
 
         </select>
@@ -110,6 +110,14 @@
                   id="description"
                   name="description"
                   placeholder="Brief overview of the material, including any key themes"></textarea>
+      
+
+      <% if (errors['description']) { %>
+        <p style="color: red"><%= errors['description'].message %></p>
+      <% } %>
+            
+
+      
       </div>
 
       <div class="form-group">
