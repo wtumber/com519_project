@@ -81,17 +81,11 @@ app.post("/guides/update/:id",guidesController.update);
 /* Recommenders */
 app.get("/recommenders",recommendersController.list);
 
-/* future routes */
 app.get("/add-recommender", authMiddleware, (req, res) => {
   res.render("add-recommender", { errors: {} });
 });
 
 app.post("/add-recommender", recommendersController.create);
-
-/*app.get("/recommenders/join/:id", recommenderController.addUser);*/
-app.get("/user/join/:id", userController.joinGroup);
-
-
 
 /* Users */
 app.get("/signup", (req, res) => {
@@ -109,6 +103,9 @@ app.get("/logout", async (req, res) => {
   global.user = false;
   res.redirect('/');
 })
+
+
+app.get("/user/join/:id", userController.joinGroup);
 
 
 
