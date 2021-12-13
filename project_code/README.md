@@ -5,3 +5,5 @@
 
 ### Notes
 The `img/` directory holds images for the portfolio as well as any images used on the site.
+
+Using upsert if does not exist.

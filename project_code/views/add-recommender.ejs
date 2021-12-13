@@ -56,37 +56,16 @@
       </div>
 
       <div class="form-group">
-        <label for="recommender_type">Select Language</label>
-        <select
-          class="form-control"
-          name="recommender_type"
-          id="exampleFormControlSelect1">
-        
-          <% recommenders.forEach( language => { %>
-          <option value="<%= language._id %>"><%= language %></option>
-          <% }) %>
-
-        </select>
-      </div>
-
-
-      <div class="form-group">
         <label for="recommender_type">Select type</label>
         <select
           class="form-control"
           name="recommender_type_id"
           id="exampleFormControlSelect1">
-        
-          <% recommenders.forEach( thing => { %>
-            <option value="<%= thing._id %>"><%= thing.recommender_type %></option>
-            <% }) %>
-
+            <option value="group">group</option>
+            <option value="individual">individual</option>
         </select>
       </div>
 
-
-
-      
       <button type="submit" style="margin-top: 1rem;margin-bottom: 2rem;" class="btn btn-primary">Create Recommender and join</button>
     </div>
 

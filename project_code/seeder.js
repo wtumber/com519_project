@@ -41,7 +41,7 @@ async function main() {
           }
         },
         {$project: {
-          username: "$_id",
+          name: "$_id",
           "_id" : 0,
           recommender_type: "$recommender_type",
           num_reviews: "$num_reviews"
@@ -52,16 +52,12 @@ async function main() {
       const recommenders = await recommendersRef.toArray();
       await db.collection("recommenders").insertMany(recommenders);
 
-      /* remove recommenders data from guides */
-      await db.collection("guides").updateMany({}, 
-        { $unset: { 
-            handle: "", 
-            aboutme: "" 
-            } 
-        }
-      );
-
-      /* Create languages and format collections */
+      /* Create languages and format collections 
+      
+    const recommenders = await Recommenders.aggregate([
+      { $group: { _id: "$username" } },
+      { $project: { name: "$_id", "_id": 0 } }
+    ]).toArray();*/
       const languages = await db.collection("guides").aggregate([
         { $group: { _id: "$language" } },
         { $project: { name: "$_id", "_id": 0 } }
@@ -74,6 +70,16 @@ async function main() {
         { $project: { content_format: "$_id", "_id": 0 } }
       ]).toArray();
       await db.collection("formats").insertMany(format);
+
+
+      /* remove recommenders data from guides */
+      await db.collection("guides").updateMany({}, 
+        { $unset: { 
+          user_type: "", 
+            aboutme: "" 
+            } 
+        }
+      );
 
       /* Database ready*/  
       load.stop();

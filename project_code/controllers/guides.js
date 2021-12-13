@@ -123,11 +123,36 @@ const recommender = await Recommenders.findById(req.body.recommended_by_id);
 exports.update = async (req, res) => {
   const id = req.params.id;
   try {
-    const taster = await Taster.updateOne({ _id: id }, req.body);
-    res.redirect('/tasters/?message=taster has been updated');
+    const recommender = await Recommenders.findById(req.body.recommended_by_id);
+    const format = await Formats.findById(req.body.format_id);
+    const language = await Languages.findById(req.body.language_id);
+
+    toUpdate = {$set: {
+      title: req.body.title,
+      author: req.body.author,
+      format: format.content_format,
+      description: req.body.description,
+      link: req.body.link,
+      language: language.name,
+      key_themes: "",
+      difficulty: req.body.difficulty,
+      recommended_by: recommender.username,
+      format_id: req.body.format_id,
+      language_id: req.body.language_id,
+      recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+      }
+    }
+
+    const guide = await Guides.updateOne({
+       _id: id,
+       recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+      },
+      toUpdate,{ upsert: true });
+    res.redirect('/?message=guide has been updated');
+
   } catch (e) {
     res.status(404).send({
-      message: `could find taster ${id}.`,
+      message: `could find guide ${id}.`,
     });
   }
 };

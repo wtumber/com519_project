@@ -82,7 +82,7 @@ app.post("/guides/update/:id",guidesController.update);
 app.get("/recommenders",recommendersController.list);
 
 /* future routes */
-app.get("/add-recommender", authMiddleware, recommendersController.createView, (req, res) => {
+app.get("/add-recommender", authMiddleware, (req, res) => {
   res.render("add-recommender", { errors: {} });
 });
 
