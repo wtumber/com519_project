@@ -63,6 +63,11 @@
            Add resource
         </a>
         <% } %>
+        <% if (!user.recommender_id) { %>
+          <div class="text-center">
+            <p class="mb-1 text-muted text-dark">Become a Recommender to make a recommendation.</p>
+          </div>
+          <% } %>
 
 
     </div>

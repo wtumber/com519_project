@@ -53,26 +53,26 @@ exports.create = async (req, res) => {
 
 
 exports.joinGroup = async (req, res) => {
-    const recommenderId = req.params.id;
-    
     try {
-      const userId = user._id;
-      const recommenderDetails = await Recommenders.findById(id);
-
-      const update = {$set: {
-        recommender_name: recommenderDetails.name,
-        recommender_id: recommenderId}
-      }
+      const recommenderId = req.params.id;
+      console.log(recommenderId) 
+      const userId = req.session.userID;
+      console.log(userId)
+      
+      const recommenderDetails = await Recommenders.findById(recommenderId);
+      console.log(recommenderDetails.name)
+      
       await User.updateOne(
-        { _id:userId},
-        update,
-        {}
-        );
-
+        { _id:userId}, {
+            $set: {
+            recommender_name: recommenderDetails.name,
+            recommender_id: recommenderId 
+            }
+        });
       res.redirect("/recommenders");
     } catch (e) {
       res.status(404).send({
-        message: `Cannot delete -  error ${id}.`,
+        message: `Cannot join -  error ${id}.`,
       });
     }
   };
