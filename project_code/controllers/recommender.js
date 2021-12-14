@@ -1,4 +1,5 @@
 const Recommenders = require("../models/Recommender");
+const User = require('../models/User');
 
 exports.list = async (req, res) => {
     try {
@@ -16,7 +17,13 @@ exports.create = async (req, res) => {
       name: req.body.name,
       recommender_type: req.body.recommender_type,
     })
-    console.log(req.session.userID)
+    const recommenderId = await Recommenders.findOne({ name: req.body.name });
+    await User.updateOne({_id: user._id},
+      { $set:
+        {recommender_name: req.body.name,
+        recommender_id: recommenderId._id}
+      }
+      );
     res.redirect('/recommenders')
     /* add recommender reference to user */
   } catch (e) {

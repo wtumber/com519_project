@@ -50,13 +50,17 @@ exports.create = async (req, res) => {
       key_themes: "",
       difficulty: req.body.difficulty,
       recommended_by: user.recommender_name,
-      //recommended_by: recommender.username,
       format_id: req.body.format_id,
       language_id: req.body.language_id,
       recommended_by_id: user.recommender_id
     })
     console.log(user.username)
-    res.redirect('/?message=resource added')
+    await Recommenders.updateOne({_id: user.recommender_id},
+      { $inc:
+        {num_reviews: +1}
+      }
+      );
+    res.redirect('/guides')
   } catch (e) {
     if (e.errors) {
       const languages = await Languages.find({});
