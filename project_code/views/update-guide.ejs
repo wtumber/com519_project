@@ -48,7 +48,8 @@
 
       <div class="form-group">
         <label for="title">Title (Required)</label>
-        <input type="title" class="form-control" id="title" name="title" placeholder="Add a title..."/>
+        <input type="title" class="form-control" id="title" name="title"
+        value="<%= guide.title %>">
   
         <% if (errors['title']) { %>
         <p style="color: red"><%= errors['title'].message %></p>
@@ -63,6 +64,7 @@
           class="form-control"
           id="author"
           name="author"
+          value="<%= guide.author %>"
           placeholder="content author..."/>
       </div>
 
@@ -71,6 +73,7 @@
         <select
           class="form-control"
           name="format_id"
+          value="<%= guide.format_id %>"
           id="exampleFormControlSelect1">
         
           <% formats.forEach( thing => { %>
@@ -93,6 +96,7 @@
         <select
           class="form-control"
           name="language_id"
+          value="<%= guide.language_id %>"
           id="exampleFormControlSelect1">
         
           <% languages.forEach( language => { %>
@@ -109,7 +113,8 @@
                   class="form-control"
                   id="description"
                   name="description"
-                  placeholder="Brief overview of the material, including any key themes"></textarea>
+                  value="<%= guide.description %>">
+                  </textarea>
       
 
       <% if (errors['description']) { %>
@@ -120,7 +125,7 @@
 
       <div class="form-group">
         <label for="difficulty">Difficulty</label>          
-        <input type="range" id="difficulty" name="difficulty" min="1" max="10" value="5" step="1" list="tickmarks">
+        <input type="range" id="difficulty" name="difficulty" min="1" max="10" value="<%= guide.difficulty %>"step="1" list="tickmarks">
         <datalist id="tickmarks">
           <option value="1"></option>
           <option value="2"></option>

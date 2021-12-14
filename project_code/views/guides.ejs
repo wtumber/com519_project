@@ -91,11 +91,11 @@
                 <a href="#" class="link">
                   Save</a>
                  <% if(!(guideid === userid)) { %>
-                 | <a href="/add-guide" class="link">Recommend this</a>
+                 | <a href="guides/update/<%= guide.id %>" class="link">Recommend this</a>
                  <%}%>
                 <%}%>
                 <% if((guideid === userid)) { %>  
-                 | <a href="#" class="link">
+                 | <a href="guides/update/<%= guide.id %>" class="link">
                   Edit</a>
                  | <a href="/guides/delete/<%= guide.id %>" class="link">Delete</a>
                 <%}%>

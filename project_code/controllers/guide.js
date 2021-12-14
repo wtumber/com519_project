@@ -109,8 +109,7 @@ exports.edit = async (req, res) => {
     res.render('update-guide', {
       languages: languages,
       formats: formats,
-      //recommenders: recommenders,
-      tasters: tasters,
+      guide: guide,
       id: id,
       errors: {}
     });
@@ -147,16 +146,16 @@ exports.update = async (req, res) => {
       language: language.name,
       key_themes: "",
       difficulty: req.body.difficulty,
-      //recommended_by: recommender.username,
+      recommended_by: user.recommender_name,
       format_id: req.body.format_id,
       language_id: req.body.language_id,
-     // recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+      recommended_by_id: user.recommender_id
       }
     }
 
     const guide = await Guides.updateOne({
        _id: id,
-       recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+       recommended_by_id: user.recommender_id
       },
       toUpdate,{ upsert: true });
     res.redirect('/?message=guide has been updated');
