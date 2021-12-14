@@ -1,3 +1,4 @@
+
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 const fs = require("fs").promises;
@@ -5,25 +6,27 @@ const path = require("path");
 const loading = require("loading-cli");
 
 /* URIs defined in .env */
+
 const { MONGODB_URI, MONGODB__PRODUCTION_URI } = process.env;
 const client = new MongoClient(
   process.env.NODE_ENV === "production" ? MONGODB__PRODUCTION_URI : MONGODB_URI
-);
-
+); 
 
 async function main() {
-    try {
+  try {
       await client.connect();
       const db = client.db();
       const results = await db.collection("guides").find({}).count();
       
-      /* If existing records then delete the current collections - for some reason dropDatase() doesn't work*/
+      /* If existing records then delete the current collections - dropDatase() not working*/
       if (results) {
+        /*try {
+          db.dropDatabase()
+        } catch (e) {}*/
         db.collection("guides").drop();
         db.collection("recommenders").drop();
         db.collection("languages").drop();
         db.collection("formats").drop();
-        db.dropDatabase();
       }
   
       const load = loading("Creating collections").start();
@@ -33,11 +36,12 @@ async function main() {
       await db.collection("guides").insertMany(JSON.parse(data));
       
       /* Create new collection using aggregation */
-      const recommendersRef = await db.collection("guides").aggregate([
-        {$group: {
+      const recommendersCollection = await db.collection("guides").aggregate([
+        {
+          $group: {
           _id: "$recommended_by",
           recommender_type: {$first: "$user_type"},
-          num_reviews:{$sum:1}
+          num_reviews: {$sum: 1}
           }
         },
         {$project: {
@@ -49,21 +53,41 @@ async function main() {
         }
       ]);
 
-      const recommenders = await recommendersRef.toArray();
+      const recommenders = await recommendersCollection.toArray();
       await db.collection("recommenders").insertMany(recommenders);
 
-      /* Create languages and format collections 
-      
-    const recommenders = await Recommenders.aggregate([
-      { $group: { _id: "$username" } },
-      { $project: { name: "$_id", "_id": 0 } }
-    ]).toArray();*/
+      const addRecommendersRef = db.collection("recommenders").find({});
+      const addRecommenders = await addRecommendersRef.toArray();
+
+      addRecommenders.forEach(async ({_id, name}) => {
+        await db.collection("guides").updateMany({recommended_by: name}, [
+          { 
+            $set: { 
+              recommended_by_id: _id
+              },
+            },
+          ]);
+      });
+            
+      /* Create languages and format collections */
       const languages = await db.collection("guides").aggregate([
         { $group: { _id: "$language" } },
         { $project: { name: "$_id", "_id": 0 } }
       ]).toArray();
       await db.collection("languages").insertMany(languages);
   
+      const addLanguageRef = db.collection("languages").find({});
+      const addLanguage = await addLanguageRef.toArray();
+
+      addLanguage.forEach(async ({_id, name}) => {
+        await db.collection("guides").updateMany({language: name}, [
+          { 
+            $set: { 
+              language_id: _id
+              },
+            },
+          ]);
+      });
 
       const format = await db.collection("guides").aggregate([
         { $group: { _id: "$format" } },
@@ -71,28 +95,31 @@ async function main() {
       ]).toArray();
       await db.collection("formats").insertMany(format);
 
+      const addFormatRef = db.collection("formats").find({});
+      const addFormat = await addFormatRef.toArray();
 
-      /* remove recommenders data from guides */
-      await db.collection("guides").updateMany({}, 
-        { $unset: { 
-          user_type: "", 
-            aboutme: "" 
-            } 
-        }
-      );
+      addFormat.forEach(async ({_id, content_format}) => {
+        await db.collection("guides").updateMany({format: content_format}, [
+          { 
+            $set: { 
+              format_id: _id
+              },
+            },
+          ]);
+      });
 
-      /* Database ready*/  
+      await db.collection("guides").updateMany({}, { $unset: { user_type: ""} });
+
       load.stop();
       console.info(
         `Collections created, database ready...`
       );
-  
-  
+
       process.exit();
-    } catch (error) {
+  } catch (error) {
       console.error("error:", error);
       process.exit();
-    }
   }
-  
-  main();
+}
+
+main();
