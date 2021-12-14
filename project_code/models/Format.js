@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const formatSchema = new Schema(
-    {format: 
+    {content_format: 
         { type: String, required: [true, 'resource format is required'] 
         },
     },

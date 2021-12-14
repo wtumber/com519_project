@@ -21,10 +21,10 @@ mongoose.connection.on("error", (err) => {
 
 
 /* Controllers - initialize before call*/
-const guidesController = require("./controllers/guides");
+const guidesController = require("./controllers/guide");
 const userController = require("./controllers/user");
 const homeController = require("./controllers/home");
-const recommendersController = require("./controllers/recommenders");
+const recommendersController = require("./controllers/recommender");
 
 /*Middleware*/
 app.use(express.static(path.join(__dirname, "public")));

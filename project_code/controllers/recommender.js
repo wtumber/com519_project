@@ -16,7 +16,7 @@ exports.create = async (req, res) => {
       name: req.body.name,
       recommender_type: req.body.recommender_type,
     })
-    console.log(user.username)
+    console.log(req.session.userID)
     res.redirect('/?message=recommender added')
     /* add recommender reference to user */
   } catch (e) {
