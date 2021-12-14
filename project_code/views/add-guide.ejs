@@ -115,23 +115,6 @@
       <% if (errors['description']) { %>
         <p style="color: red"><%= errors['description'].message %></p>
       <% } %>
-            
-
-      
-      </div>
-
-      <div class="form-group">
-        <label for="recommender">Who's recommmending?</label>
-        <select
-          class="form-control"
-          name="recommender_id"
-          id="exampleFormControlSelect1">
-        
-          <% recommenders.forEach( recommender => { %>
-          <option value="<%= recommender._id %>"><%= recommender.username %></option>
-          <% }) %>
-
-        </select>
       </div>
 
       <div class="form-group">

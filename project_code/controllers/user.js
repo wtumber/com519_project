@@ -55,13 +55,8 @@ exports.create = async (req, res) => {
 exports.joinGroup = async (req, res) => {
     try {
       const recommenderId = req.params.id;
-      console.log(recommenderId) 
       const userId = req.session.userID;
-      console.log(userId)
-      
       const recommenderDetails = await Recommenders.findById(recommenderId);
-      console.log(recommenderDetails.name)
-      
       await User.updateOne(
         { _id:userId}, {
             $set: {

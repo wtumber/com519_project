@@ -65,15 +65,17 @@
                     <th>Name</th>
                     <th>Contributions</th>
                     <th>Type</th>
+                    <% if(user) { %>
                     <th>Join </th>
+                    <%}%>
                 </tr>
                 <% recommenders.forEach(recommender => { %>
                 <tr>
                     <td> <%= recommender.name %></td>
                     <td> <%= recommender.num_reviews %></td>
                     <td> <%= recommender.recommender_type %></td>
+                    <% if (user) { %>
                     <td> 
-                      <% if(user) { %> <!--recommender.type === "group"-->
                       <a class="btn btn-sm btn-outline-primary" 
                       href="/user/join/<%= recommender.id %>">
                       Join 

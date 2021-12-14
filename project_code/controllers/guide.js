@@ -19,6 +19,11 @@ exports.delete = async (req, res) => {
   const id = req.params.id;
   try {
     await Guides.findByIdAndRemove(id);
+    await Recommenders.updateOne({_id: user.recommender_id},
+      { $inc:
+        {num_reviews: -1}
+      }
+      );
     res.redirect("/guides");
   } catch (e) {
     res.status(404).send({
@@ -30,9 +35,10 @@ exports.delete = async (req, res) => {
 exports.create = async (req, res) => {
   try {
 
-    const recommender = await Recommenders.findById(req.body.recommended_by_id);
+    //const recommender = await Recommenders.findById(req.body.recommended_by_id);
     const format = await Formats.findById(req.body.format_id);
     const language = await Languages.findById(req.body.language_id);
+
 
     await Guides.create({
       title: req.body.title,
@@ -43,10 +49,11 @@ exports.create = async (req, res) => {
       language: language.name,
       key_themes: "",
       difficulty: req.body.difficulty,
-      recommended_by: recommender.username,
+      recommended_by: user.recommender_name,
+      //recommended_by: recommender.username,
       format_id: req.body.format_id,
       language_id: req.body.language_id,
-      recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+      recommended_by_id: user.recommender_id
     })
     console.log(user.username)
     res.redirect('/?message=resource added')
@@ -57,7 +64,7 @@ exports.create = async (req, res) => {
       const recommenders = await Recommenders.find({});
       res.render('add-guide', {languages: languages,
         formats: formats, 
-        recommenders: recommenders, 
+        //recommenders: recommenders, 
         errors: e.errors })
       return;
     }
@@ -71,11 +78,11 @@ exports.createView = async (req, res) => {
   try {
     const languages = await Languages.find({});
     const formats = await Formats.find({});
-    const recommenders = await Recommenders.find({});
+    //const recommenders = await Recommenders.find({});
     res.render("add-guide", {
       languages: languages,
       formats: formats, 
-      recommenders: recommenders,
+     // recommenders: recommenders,
       errors: {}
     });
 
@@ -92,13 +99,13 @@ exports.edit = async (req, res) => {
   try {
     const languages = await Languages.find({});
     const formats = await Formats.find({});
-    const recommenders = await Recommenders.find({});
+    //const recommenders = await Recommenders.find({});
     const guide = await Guides.findById(id);
     if (!guide) throw Error("can't find guide");
     res.render('update-guide', {
       languages: languages,
       formats: formats,
-      recommenders: recommenders,
+      //recommenders: recommenders,
       tasters: tasters,
       id: id,
       errors: {}
@@ -123,7 +130,7 @@ const recommender = await Recommenders.findById(req.body.recommended_by_id);
 exports.update = async (req, res) => {
   const id = req.params.id;
   try {
-    const recommender = await Recommenders.findById(req.body.recommended_by_id);
+    //const recommender = await Recommenders.findById(req.body.recommended_by_id);
     const format = await Formats.findById(req.body.format_id);
     const language = await Languages.findById(req.body.language_id);
 
@@ -136,10 +143,10 @@ exports.update = async (req, res) => {
       language: language.name,
       key_themes: "",
       difficulty: req.body.difficulty,
-      recommended_by: recommender.username,
+      //recommended_by: recommender.username,
       format_id: req.body.format_id,
       language_id: req.body.language_id,
-      recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
+     // recommended_by_id: req.body.recommended_by_id/*user.recommended_by_id*/
       }
     }
 
