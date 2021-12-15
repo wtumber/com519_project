@@ -85,3 +85,6 @@ therefore constructed another query
 save now works
 uses AddToSet to ensure only one can be added at a time - no duplicates
 option to unsave added
+option to show more to guides tab
+
+npm install -D cross-env
