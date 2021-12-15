@@ -60,3 +60,15 @@ upsert seems to have an error requiring retrying in order to upsert effectively,
 known issues
 when update/:id this means blog.css cannot be applied and therefore update-guide has no css layout
 unique:true gives an UnhandledPromiseRejectionWarning:
+
+
+forced to create indexes
+```js
+await db.collection("guides").createIndex(
+        { 
+          "$**" : "text",
+       },{
+        "default_language": "en",
+        "language_override": "en"
+       });
+```

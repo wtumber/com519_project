@@ -1,4 +1,3 @@
-
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 const fs = require("fs").promises;
@@ -109,6 +108,14 @@ async function main() {
       });
 
       await db.collection("guides").updateMany({}, { $unset: { user_type: ""} });
+
+      await db.collection("guides").createIndex(
+        { 
+          "$**" : "text",
+       },{
+        "default_language": "en",
+        "language_override": "en"
+       });
 
       load.stop();
       console.info(

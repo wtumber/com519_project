@@ -28,5 +28,6 @@ const guideSchema = new Schema(
     { timestamps: true }
   );
 
+guideSchema.index({"$title": "text"});
 
 module.exports = mongoose.model("Guide", guideSchema);

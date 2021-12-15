@@ -4,10 +4,8 @@ const bcrypt = require('bcrypt');
 
 const userSchema = new Schema(
     {
-        username: { type: String, required: [true, 'Please create a username.'], 
-                    index: true, unique: [true,"username already exists"] },
-        email: { type: String, required: [true, 'Please provide an email address.'],
-                    index: true, unique: [true,"username already exists"] },
+        username: { type: String, required: [true, 'Please create a username.'], index: { unique: true } },
+        email: { type: String, required: [true, 'Please provide an email address.'], index: { unique: true } },
         password: { type: String, required: [true, 'Please create a password.'], 
                                     minLength: [4, "Password too short."],
                                     maxLength: [14, "Password too long."] },

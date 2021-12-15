@@ -10,11 +10,19 @@ app.set("view engine", "ejs");
 
 const { PORT, MONGODB_URI } = process.env;
 
+/* Controllers - initialize before call*/
+const guidesController = require("./controllers/guide");
+const userController = require("./controllers/user");
+const homeController = require("./controllers/home");
+const recommendersController = require("./controllers/recommender");
+const searchApiController = require("./controllers/api/guide");
+
+
 /*Database*/
 mongoose.connect(MONGODB_URI, { 
   useNewUrlParser: true,
-  useCreateIndex: true, 
-  autoIndex: true, 
+  // useCreateIndex: true, 
+  // autoIndex: true, 
  }).then(() => {
   console.log('Connected to database.');
 });
@@ -24,13 +32,6 @@ mongoose.connection.on("error", (err) => {
     console.log("Not connecting to database.");
     process.exit();
   });
-
-
-/* Controllers - initialize before call*/
-const guidesController = require("./controllers/guide");
-const userController = require("./controllers/user");
-const homeController = require("./controllers/home");
-const recommendersController = require("./controllers/recommender");
 
 
 /*Middleware*/
@@ -58,18 +59,10 @@ const authMiddleware = async (req, res, next) => {
   next()
 }
 
-app.get("/", homeController.list);
-/*
-app.get("/", (req, res) => {
-  res.render("index");
-}); */
-
-app.get("/search", (req, res) => {
-  res.render("search");
-});
-
-
 /*App routes*/
+
+app.get("/", homeController.list);
+
 
 /* Guides */
 app.get("/guides",guidesController.list); /*method listed in guides controller - other methods: create, update, delete*/
@@ -83,7 +76,7 @@ app.get("/add-guide", authMiddleware, guidesController.createView, (req, res) =>
 app.post("/add-guide", guidesController.create);
 
 
-//app.get("/update/:id", guidesController.edit);
+//app.get("/update/:id", guidesController.edit); Attempt to provide errors to update-guide
 app.get("/update/:id",guidesController.edit, (req, res) => {
   res.render('update-guide', { errors: {} })
 });
@@ -96,7 +89,6 @@ app.get("/recommenders",recommendersController.list);
 app.get("/add-recommender", authMiddleware, (req, res) => {
   res.render("add-recommender", { errors: {} });
 });
-
 app.post("/add-recommender", recommendersController.create);
 
 /* Users */
@@ -116,11 +108,15 @@ app.get("/logout", async (req, res) => {
   res.redirect('/');
 })
 
-
 app.get("/user/join/:id", userController.joinGroup);
 
 app.get("/user/leave/:id", userController.leaveGroup);
 
+/* Search */
+app.get("/search",(req,res) => {
+  res.render('search', searchApiController);
+});
+app.get("/api/search", searchApiController.list);
 
 /* Local app */
 app.listen(PORT, () => {
