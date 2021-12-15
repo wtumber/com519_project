@@ -38,6 +38,19 @@ exports.create = async (req, res) => {
             aboutme: req.body.aboutme
             });
 
+        const emailExists = await User.findOne({ email: req.body.email })
+        const usernameExists = await User.findOne({ username: req.body.username })
+
+        if(emailExists ) {
+            res.render('signup', { errors: { email: { message: 'email already exists' } }})
+            return;
+        }
+
+        if(usernameExists ) {
+            res.render('signup', { errors: { username: { message: 'username already exists' } }})
+            return;
+        }
+
         await user.save();
         res.redirect('/?message=user saved')
     } catch (e) {
