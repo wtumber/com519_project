@@ -60,6 +60,7 @@ upsert seems to have an error requiring retrying in order to upsert effectively,
 known issues
 when update/:id this means blog.css cannot be applied and therefore update-guide has no css layout
 unique:true gives an UnhandledPromiseRejectionWarning:
+Using upsert if does not exist.
 
 https://github.com/typeorm/typeorm/issues/4122
 
@@ -78,3 +79,5 @@ await db.collection("guides").createIndex(
         "language_override": "en"
        });
 ```
+
+forEach not working with .populate 

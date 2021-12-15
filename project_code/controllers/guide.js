@@ -34,9 +34,9 @@ exports.delete = async (req, res) => {
 
 
 exports.create = async (req, res) => {
+  const format = await Formats.findById(req.body.format_id);
+  const language = await Languages.findById(req.body.language_id);
   try {
-    const format = await Formats.findById(req.body.format_id);
-    const language = await Languages.findById(req.body.language_id);
     await Guides.create({
       title: req.body.title,
       author: req.body.author,
@@ -61,7 +61,7 @@ exports.create = async (req, res) => {
     if (e.errors) {
       const languages = await Languages.find({});
       const formats = await Formats.find({});
-      const recommenders = await Recommenders.find({});
+
       res.render('add-guide', {languages: languages,
         formats: formats, 
         errors: e.errors })
@@ -169,10 +169,10 @@ exports.update = async (req, res) => {
     }
   } catch (e) {
     if (e.errors) {
-    const languages = await Languages.find({});
-    const formats = await Formats.find({});
-    const guide = await Guides.findById(id);
-    if (!guide) throw Error("can't find guide");
+    if (!guide) throw Error("can't find guide");  
+    //const languages = await Languages.find({});
+    //const formats = await Formats.find({});
+    //const guide = await Guides.findById(id);
     res.render('update-guide', {
       languages: languages,
       formats: formats,

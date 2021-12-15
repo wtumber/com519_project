@@ -16,6 +16,8 @@ const userController = require("./controllers/user");
 const homeController = require("./controllers/home");
 const recommendersController = require("./controllers/recommender");
 const searchApiController = require("./controllers/api/guide");
+const savedApiController = require("./controllers/api/saved");
+const savedController = require("./controllers/saved");
 
 
 /*Database*/
@@ -117,6 +119,11 @@ app.get("/search",(req,res) => {
   res.render('search', searchApiController);
 });
 app.get("/api/search", searchApiController.list);
+
+/* Saved */
+app.post("/api/saved", savedApiController.create);
+
+app.get("/saved", savedController.list);
 
 /* Local app */
 app.listen(PORT, () => {

@@ -73,8 +73,8 @@
           name="format_id"
           id="exampleFormControlSelect1">
         
-          <% formats.forEach( thing => { %>
-            <option value="<%= thing._id %>"><%= thing['content_format'] %></option>
+          <% formats.forEach( format => { %>
+            <option value="<%= format._id %>"><%= format['content_format'] %></option>
             <% }) %>
 
         </select>

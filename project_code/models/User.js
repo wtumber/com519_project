@@ -12,6 +12,10 @@ const userSchema = new Schema(
         handle: String,
         aboutme: { type: String, maxlength: [200, "Please keep this section short."] },
         recommender_name: String,
+        saved: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Guide"
+          },
         recommender_id:
         {
             type: mongoose.Schema.Types.ObjectId,
