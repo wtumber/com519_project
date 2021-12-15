@@ -37,6 +37,7 @@ exports.create = async (req, res) => {
             handle: req.body.handle,
             aboutme: req.body.aboutme
             });
+
         await user.save();
         res.redirect('/?message=user saved')
     } catch (e) {

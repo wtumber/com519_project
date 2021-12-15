@@ -54,3 +54,9 @@ use of snake case regularly as opposed to camel case as I am developing in pytho
 
 npm run seed
 npm run seedproduction
+
+upsert seems to have an error requiring retrying in order to upsert effectively, thereofre I used an alternative of simply checking if it existed and then determining action
+
+known issues
+when update/:id this means blog.css cannot be applied and therefore update-guide has no css layout
+unique:true gives an UnhandledPromiseRejectionWarning:

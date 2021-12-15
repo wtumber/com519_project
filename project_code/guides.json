@@ -12,7 +12,7 @@
         ],
         "difficulty": 3,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Machine Learning Bites",
@@ -28,7 +28,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Cookiecutter Data Science",
@@ -44,7 +44,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
@@ -60,7 +60,7 @@
         ],
         "difficulty": 8,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Ultimate R Cheat Sheet",
@@ -77,7 +77,7 @@
         ],
         "difficulty": 8,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Setting Up a New Project",
@@ -94,7 +94,7 @@
         ],
         "difficulty": 7,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "TensorFlow Examples",
@@ -111,7 +111,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "100+ Data Science, Deep Learning, AI & Machine Learning Cheat Sheet PDF",
@@ -128,7 +128,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "ML-For-Beginners",
@@ -146,7 +146,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Python resources for everybody",
@@ -161,7 +161,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Python Data Science Handbook",
@@ -178,7 +178,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Learn Git Branching",
@@ -194,7 +194,7 @@
         ],
         "difficulty": 5,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "RegexOne",
@@ -211,7 +211,7 @@
         ],
         "difficulty": 5,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "R for Data Science",
@@ -231,7 +231,7 @@
         ],
         "difficulty": 9,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Introduction to Probability for Data Science",
@@ -248,7 +248,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "wtumber",
-        "user_type": "individual"
+        "user_type": "enthusiast"
     },
     {
         "title": "Monet CycleGAN Tutorial",
@@ -266,7 +266,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "datascientists",
-        "user_type": "group"
+        "user_type": "business"
     },
     {
         "title": "100+ Free Data Science Books",
@@ -284,7 +284,7 @@
         ],
         "difficulty": 10,
         "recommended_by": "datascientists",
-        "user_type": "group"
+        "user_type": "business"
     },
     {
         "title": "Julia Data Science",
@@ -305,7 +305,7 @@
         ],
         "difficulty": 6,
         "recommended_by": "datascientists",
-        "user_type": "group"
+        "user_type": "business"
     },
     {
         "title": "RegexOne",
@@ -322,7 +322,7 @@
         ],
         "difficulty": 5,
         "recommended_by": "datascientists",
-        "user_type": "group"
+        "user_type": "business"
     },
     {
         "title": "Complete Guide to Regressional Analysis Using Python",
@@ -338,6 +338,6 @@
         ],
         "difficulty": 7,
         "recommended_by": "PythonUserClub",
-        "user_type": "group"
+        "user_type": "business"
     }
 ]

@@ -11,7 +11,13 @@ app.set("view engine", "ejs");
 const { PORT, MONGODB_URI } = process.env;
 
 /*Database*/
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { 
+  useNewUrlParser: true,
+  useCreateIndex: true, 
+  autoIndex: true, 
+ }).then(() => {
+  console.log('Connected to database.');
+});
 mongoose.connection.on("error", (err) => {
     console.error(err);
     console.log("Not connecting to database.");
@@ -74,8 +80,11 @@ app.get("/add-guide", authMiddleware, guidesController.createView, (req, res) =>
 app.post("/add-guide", guidesController.create);
 
 
-app.get("/guides/update/:id", guidesController.edit);
-app.post("/guides/update/:id",guidesController.update);
+//app.get("/update/:id", guidesController.edit);
+app.get("/update/:id",guidesController.edit, (req, res) => {
+  res.render('update-guide', { errors: {} })
+});
+app.post("/update/:id",guidesController.update);
 
 
 /* Recommenders */

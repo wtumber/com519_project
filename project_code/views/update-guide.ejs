@@ -36,7 +36,6 @@
   </head>
 <body style="display:flex; flex-direction:column; height:100vh;">
   <%- include('common/header'); -%>
-
   <main class="container " style="flex: 1 0 auto;">
 
     <div class="text-center">
@@ -44,7 +43,7 @@
     </div>
 
     <div class="d-flex justify-content-center align-items-center">
-      <form method="POST" action="/add-guide">
+      <form method="POST" action="/update/<%= guide.id %>">
 
       <div class="form-group">
         <label for="title">Title (Required)</label>
@@ -89,7 +88,7 @@
           class="form-control"
           id="link"
           name="link"
-          placeholder="Provide content link..."/>
+          value="<%= guide.link %>"/>
       </div>
       <div class="form-group">
         <label for="language">Select Language</label>
@@ -108,14 +107,11 @@
 
       <div class="form-group">
                 <label for="description">Description</label>
-                <textarea
-                  style="height: 6em;"
+                <input
                   class="form-control"
                   id="description"
                   name="description"
-                  value="<%= guide.description %>">
-                  </textarea>
-      
+                  value="<%= guide.description %>"/>      
 
       <% if (errors['description']) { %>
         <p style="color: red"><%= errors['description'].message %></p>

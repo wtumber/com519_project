@@ -176,7 +176,7 @@ difficulty = [3,
 
 recommended_by = ["wtumber"] * 15 + ["datascientists"] * 4 + ["PythonUserClub"]
 
-user_type = ["individual"] * 15 + ["group"] * 4 + ["group"]
+user_type = ["enthusiast"] * 15 + ["business"] * 4 + ["business"]
 
 
 
