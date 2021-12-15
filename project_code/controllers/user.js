@@ -103,3 +103,21 @@ try {
     });
 }
 };
+
+exports.unsave = async (req, res) => {
+    try {
+        const guideId = req.params.id;
+        const userId = req.session.userID;
+        await User.updateOne(
+        { _id:userId}, {
+            $pull: {
+            saved: guideId
+            }
+        });
+        res.redirect("/saved");
+    } catch (e) {
+        res.status(404).send({
+        message: `Cannot leave -  error ${id}.`,
+        });
+    }
+};

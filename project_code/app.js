@@ -114,6 +114,8 @@ app.get("/user/join/:id", userController.joinGroup);
 
 app.get("/user/leave/:id", userController.leaveGroup);
 
+app.get("/user/unsave/:id",userController.unsave);
+
 /* Search */
 app.get("/search",(req,res) => {
   res.render('search', searchApiController);
@@ -123,7 +125,10 @@ app.get("/api/search", searchApiController.list);
 /* Saved */
 app.post("/api/saved", savedApiController.create);
 
-app.get("/saved", savedController.list);
+app.get("/saved", authMiddleware, savedController.list, (req, res) => {
+  res.render("saved", { errors: {} });
+});
+
 
 /* Local app */
 app.listen(PORT, () => {

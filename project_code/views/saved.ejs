@@ -44,10 +44,10 @@
     </div>
 
     </div>
-    <% const savedGuides = guides %>
-    <%= savedGuides %>
-    <% savedGuides.forEach(guide => { %>
     <div class="row mb-3">
+    <% const savedGuides = guides %>
+    <% savedGuides.forEach(guide => { %>
+    
         <div class="col-md-4">
             <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
@@ -56,12 +56,18 @@
                     <div class="mb-1 text-muted">Recommended by <i><%= guide.recommended_by %></i></div>
                     <p class="card-text mb-auto"><%= guide.description %></p>
                     <div>
-                    <a href="<%= guide.link %>" class="link link-secondary">Go to site</a>
+                        <a href="<%= guide.link %>" class="link link-secondary">Go to site</a> 
+                        |
+                        <a href="/user/unsave/<%= guide.id %>" class="link link-primary">Unsave</a> 
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
     <% } )%>
+
+    </div>
+    
   </main>
     <%- include('common/footer') -%>
 </body>

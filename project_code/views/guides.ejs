@@ -27,6 +27,8 @@
         }
       }
     </style>
+    <!-- Search script-->
+    <script src="scripts/search.js"></script>
 
     
     <!-- Custom styles for this template -->
@@ -81,14 +83,12 @@
               <div>
                 <a href="<%= guide.link %>" class="link link-secondary">Go to site</a>
                 <% if(user) { %>
-                 | 
-                <a href="#" class="link">
-                  Save</a>
-                <% if(user.recommender_id) { %>
-                <% if(!(guideid === userid)) { %>
-                 | <a href="update/<%= guideChangeId %>" class="link">Recommend this</a>
-                <%}%>
-                <%}%>
+                 |  
+                <a href="#"  onclick="handleSave('<%= guide.id %>')" class="link">
+                Save</a>
+                    <% if(user.recommender_id && !(guideid === userid)) { %>
+                    | <a href="update/<%= guideChangeId %>" class="link">Recommend this</a>
+                    <%}%>
                 <%}%>
                 <% if((guideid === userid)) { %>  
                  | <a href="update/<%= guide.id.toString(16) %>" class="link">
