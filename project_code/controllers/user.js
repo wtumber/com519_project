@@ -72,3 +72,21 @@ exports.joinGroup = async (req, res) => {
       });
     }
   };
+
+exports.leaveGroup = async (req, res) => {
+try {
+    const userId = req.session.userID;
+    await User.updateOne(
+    { _id:userId}, {
+        $unset: {
+        recommender_name: "",
+        recommender_id: ""
+        }
+    });
+    res.redirect("/recommenders");
+} catch (e) {
+    res.status(404).send({
+    message: `Cannot leave -  error ${id}.`,
+    });
+}
+};

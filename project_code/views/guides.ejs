@@ -44,17 +44,6 @@
     </div>
 
     <div class="text-center">
-        <div class="dropdown" style="margin: 10px;">
-          <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Sort
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Newest to oldest</a>
-            <a class="dropdown-item" href="#">Oldest to newest</a>
-            <a class="dropdown-item" href="#">A-Z</a>
-          </div>
-        </div>
         <% if(user.recommender_id) { %>
         <a href="/add-guide"class="btn btn-outline-primary" style="margin-bottom: 10px;">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
@@ -77,7 +66,7 @@
       
       <% guides.forEach(guide => { %>
       <% const guideid = guide.recommended_by_id + "";%>
-      <% const guideChangeId = guide.id.toString(10) %>
+      <% const guideChangeId = guide.id %>
       <div class="col-md-4">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static">
@@ -91,12 +80,14 @@
                  | 
                 <a href="#" class="link">
                   Save</a>
-                 <% if(!(guideid === userid)) { %>
+                <% if(user.recommender_id) { %>
+                <% if(!(guideid === userid)) { %>
                  | <a href="update/<%= guideChangeId %>" class="link">Recommend this</a>
-                 <%}%>
+                <%}%>
+                <%}%>
                 <%}%>
                 <% if((guideid === userid)) { %>  
-                 | <a href="update/<%= guideChangeId %>" class="link">
+                 | <a href="update/<%= guide.id.toString(16) %>" class="link">
                   Edit</a>
                  | <a href="/guides/delete/<%= guide.id %>" class="link">Delete</a>
                 <%}%>

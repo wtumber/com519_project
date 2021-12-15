@@ -24,7 +24,7 @@ exports.create = async (req, res) => {
         recommender_id: recommenderId._id}
       }
       );
-    res.redirect('/recommenders')
+    //res.redirect('/recommenders')
     /* add recommender reference to user */
   } catch (e) {
     if (e.errors) {
@@ -39,17 +39,3 @@ exports.create = async (req, res) => {
   }
 }
   
-/*exports.createView = async (req, res) => {
-
-  try {
-
-     const recommenders = await Recommenders.find({}); 
-
-    res.render("add-recommender", {errors: {}});
-
-  } catch (e) {
-    res.status(404).send({
-      message: `could not generate create data`,
-    });
-  }
-} */

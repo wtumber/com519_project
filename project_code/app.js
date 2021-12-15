@@ -18,6 +18,7 @@ mongoose.connect(MONGODB_URI, {
  }).then(() => {
   console.log('Connected to database.');
 });
+
 mongoose.connection.on("error", (err) => {
     console.error(err);
     console.log("Not connecting to database.");
@@ -25,12 +26,12 @@ mongoose.connection.on("error", (err) => {
   });
 
 
-
 /* Controllers - initialize before call*/
 const guidesController = require("./controllers/guide");
 const userController = require("./controllers/user");
 const homeController = require("./controllers/home");
 const recommendersController = require("./controllers/recommender");
+
 
 /*Middleware*/
 app.use(express.static(path.join(__dirname, "public")));
@@ -57,9 +58,11 @@ const authMiddleware = async (req, res, next) => {
   next()
 }
 
+app.get("/", homeController.list);
+/*
 app.get("/", (req, res) => {
   res.render("index");
-});
+}); */
 
 app.get("/search", (req, res) => {
   res.render("search");
@@ -116,6 +119,7 @@ app.get("/logout", async (req, res) => {
 
 app.get("/user/join/:id", userController.joinGroup);
 
+app.get("/user/leave/:id", userController.leaveGroup);
 
 
 /* Local app */
