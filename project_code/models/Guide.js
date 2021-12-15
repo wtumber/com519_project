@@ -3,7 +3,10 @@ const { Schema } = mongoose;
 
 const guideSchema = new Schema(
     {
-      title: {type:String, required: [true, 'Please provide a title.']}, 
+      title: {
+        type:String, 
+        minLength: [3, "Title must be longer."],
+        required: [true, 'Please provide a title.']}, 
       author: String,
       format: {type:String, required: [true, 'Please specify the resource type.']}, 
       description: { type: String,  maxlength: [200, "Please keep the summary short."] },

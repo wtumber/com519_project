@@ -61,6 +61,12 @@ known issues
 when update/:id this means blog.css cannot be applied and therefore update-guide has no css layout
 unique:true gives an UnhandledPromiseRejectionWarning:
 
+https://github.com/typeorm/typeorm/issues/4122
+
+This indices issues seemed to be consistent even with the starter project, therefore I have impletemented a workaround.
+
+Additionally, I was forced to create text indices manually in the seeder.js due to an unknwown language error arising.
+
 
 forced to create indexes
 ```js
