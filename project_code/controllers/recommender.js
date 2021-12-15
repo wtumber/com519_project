@@ -12,6 +12,13 @@ exports.list = async (req, res) => {
 
 exports.create = async (req, res) => {
   try {
+    const nameExists = await Recommenders.findOne({ name: req.body.name })
+
+    if(nameExists ) {
+        res.render('add-recommender', { errors: { name: { message: 'recommender already exists' } }})
+        return;
+    }
+
 
     await Recommenders.create({
       name: req.body.name,
