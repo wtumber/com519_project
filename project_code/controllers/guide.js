@@ -7,13 +7,14 @@ const bodyParser = require("body-parser");
 
 exports.list = async (req, res) => {
   const limit = parseInt(req.query.limit) || 9;
+  const sortGuides = {"_id": -1} // timestamp
 
     try {
-      const guides = await Guides.find({}).limit(limit);
+      const guides = await Guides.find({}).limit(limit).sort(sortGuides);
 
       res.render("guides", {
         guides: guides,
-        limit: limit
+        limit: limit,
        });
     } catch (e) {
       res.status(404).send({ message: "could not list guides" });

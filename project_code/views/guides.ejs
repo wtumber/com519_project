@@ -56,7 +56,6 @@
         </svg>
            Add resource
         </a>
-        
         <% } %>
         <% if (!user.recommender_id) { %>
           <div class="text-center">
@@ -103,7 +102,7 @@
         <%})%>
 
         <div class="text-center">
-          <a class="blog-header-logo text-dark" 
+          <a class="btn btn-outline-primary" 
           style="font-size: 1.5rem !important;"
            href="/guides?limit=<%= limit + 3 %>">Showing <%= limit %>. show more? (+3)</a>
         </div>
