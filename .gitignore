@@ -1,9 +1,7 @@
-create_initial_data/__pycache__
-project_code/.env
-project_code/node_modules
+project_code/create_initial_data/__pycache__
+.env
+node_modules
 project_code/TMP.md
-img/img/
+project_code/img/img/
 .vscode/
-public/
-testbed.js
-testing_order.xlsx
+
