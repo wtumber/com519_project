@@ -1,30 +1,26 @@
 # Dambry
 ## Running the project code
 
-Please ensure you have installed:
+**Please ensure you have first installed installed Node.js and either MongoDB or have an Atlas cluster.**
 
-1. Node.js
-2. This thing
+### Using local MongoDB 
 
-With these installed: 
-1. Rename .env.example to .env.
-1. Change URIs in .env to your admin username and password.
-1. `npm install`
-1. `npm run seed` (for production `npm run seedPRODUCTION`)
-1. `npm run dev`
+1. Rename .env.local_example to .env.
+1. In the terminal: `npm install`
+1. In the terminal: `npm run seed`
+1. In the terminal: `npm run dev`
+1. The site should be available [here](http://localhost:2020/).
 
-## Documentation
+### Using MongoDB Atlas
+1. Rename .env.atlas_example to .env.
+1. Change URIs in .env to your cluster admin username and password.
+1. In the terminal: `npm install`
+1. In the terminal: `npm run seed` (use `npm run seedProduction` for production)
+1. In the terminal: `npm run dev`
+1. The site should be available [here](http://localhost:2020/).
+
+## Seed data
+Read the guide.json [documentation](/project_code/create_initial_data/README.md).
+
+## Project Documentation
 Read the [project documentation](documentation.md).
-
-### Databases
-Called guidesDEV and guides.
-guides contains colletions users, guides, and recommenders.
-
-
-option to unsave added
-option to show more to guides tab
-
-npm install -D cross-env
-
-### Notes
-The `img/` directory holds images for the portfolio as well as any images used on the site.

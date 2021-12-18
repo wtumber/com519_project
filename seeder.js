@@ -31,7 +31,7 @@ async function main() {
       const load = loading("Creating collections").start();
 
       /* Import json data */
-      const data = await fs.readFile(path.join(__dirname, "guides.json"), "utf8");
+      const data = await fs.readFile(path.join(__dirname, "/project_code/create_initial_data/guides.json"), "utf8");
       await db.collection("guides").insertMany(JSON.parse(data));
       
       /* Create new collection using aggregation */

@@ -44,7 +44,7 @@ await db.collection("guides").createIndex(
        });
 ```
 * `.populate` was not creating an array, resulting in a `forEach is not a function` error. To fix this I found the saved guide Ids, then retrieved the guides from the database manually.
-* When adding a saved guide, duplicates could come up. Therefore I opted to use `$addToSet` to automatically deal with this.
+* You could repeatedly save the same guide, resulting in duplication. Therefore I opted to use `$addToSet` to automatically deal with this.
 * Visiting any update/:id page returns the error `blog.css cannot be applied`. This means blog.css does not get applied to update-guide.ejs.
 * Heroku did not recognise the buildpack for this project. In this case the fix was to simply define the buildpack manually using `heroku buildpacks:set heroku/nodejs`.
 
