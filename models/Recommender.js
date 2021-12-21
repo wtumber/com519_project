@@ -12,6 +12,3 @@ const recommenderSchema = new Schema(
 
 
 module.exports = mongoose.model("Recommender", recommenderSchema);
-
-/* add a userid -
- when create if cannot find username in recommenders then create recommedner*/
