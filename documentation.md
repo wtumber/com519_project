@@ -1,10 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
-urlcolor: blue
----
-
 Dambry - COM519 Project 
 ===
 _Will Tumber_  
@@ -38,6 +31,12 @@ Many large organisations moved away from DataCamp which means they need alternat
 
 ### Database design
 I use a MongoDB database, following the Data Model Design identified by MongoDB as ["Normalized Data Models"](https://docs.mongodb.com/manual/core/data-model-design/). This would enable me to represent complex many-to-many relationships in the future while decreasing the quantity of duplicate information in the database.
+
+The site has 6 basic views: homepage, search, resources, recommenders, sign up, and log in. When a user has logged in additional views become available: saved, and add recommender. A user that belongs to a Recommender group has the additional views: add resource and edit. 
+
+The general flow of the app is as follows:
+
+=======
 
 The site has 6 basic views: homepage, search, resources, recommenders, sign up, and log in. When a user has logged in additional views become available: saved, and add recommender. A user that belongs to a Recommender group has the additional views: add resource and edit. 
 
@@ -112,3 +111,6 @@ One issue which I had not anticipated was following naming conventions. I was de
 There are aspects of the application which are mostly only applicable to a toy problem and would not be suitable for a industry-ready application. For example, the *num_reviews* column in the _Recommenders_ collection provides no information that is not easily accessed using a `count()` method. It is useful in this application, however, as it demonstrates a potential use for `.UpdateOne`. 
 
 I have experience developing data-oriented apps using {Shiny} in R. Learning another toolset which is capable of achieving the same results has been refreshing. I have also been able to integrate the lessons from this application into the pipeline of other applications. For example, I can use the frontend development method shown in this module in combination with R to hold data. Alternatively, I could use R to query data from a MongoDB database and present that in a {shiny} app. As a result of this module I am now familiar with JavaScript and feel confident using it in the workplace for simple applications. Additionally, I have recognised many of the steps from this project in online tutorials, meaning that I should be able to use the basis of this module to learn other skills such as creating production-grade APIs.
+
+I have experience developing data-oriented apps using {Shiny} in R. Learning another toolset which is capable of achieving the same results has been refreshing. I have also been able to integrate the lessons from this application into the pipeline of other applications. For example, I can use the frontend development method shown in this module in combination with R to hold data. Alternatively, I could use R to query data from a MongoDB database and present that in a {shiny} app. As a result of this module I am now familiar with JavaScript and feel confident using it in the workplace for simple applications. Additionally, I have recognised many of the steps from this project in online tutorials, meaning that I should be able to use the basis of this module to learn other skills such as creating production-grade APIs.
+
