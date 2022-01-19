@@ -36,8 +36,6 @@ The site has 6 basic views: homepage, search, resources, recommenders, sign up, 
 
 The general flow of the app is as follows:
 
-=======
-
 The site has 6 basic views: homepage, search, resources, recommenders, sign up, and log in. When a user has logged in additional views become available: saved, and add recommender. A user that belongs to a Recommender group has the additional views: add resource and edit. 
 
 The general flow of the app is as follows:
