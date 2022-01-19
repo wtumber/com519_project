@@ -35,8 +35,11 @@ The diagram below represents the database seeding process.
 ### Database design
 The database follows the Data Model Design identified by MongoDB as ["Normalized Data Models"](https://docs.mongodb.com/manual/core/data-model-design/). This would enable me to represent complex many-to-many relationships in the future while decreasing the quantity of duplicate information in the database.
 
+I used the bootstrap [blog](https://getbootstrap.com/docs/4.0/examples/blog/) template as a starting point for this application and have used the bootstrap [glyphicon SVGs](https://icons.getbootstrap.com/) to give the application a better look. 
+
 #### **Database ERD**
-![Database ERD](/project_code/img/public/database_erd.png)
+<!--![Database ERD](/project_code/img/public/database_erd.png)-->
+<img src="/project_code/img/public/database_erd.png" width="48">
 
 One _Recommender_ can make many (or no) recommendations , however one _Guide_ can only have one _Recommender_. This is because each guide is a single recommendation, and so when someone else recommends that same guide, a new _Guide_ is created. This is important because the new _Recommender_ may hold a different opinion regarding the _Guide_ content which is important to show but should not take precedent over the previous information. Additionally, repeat recommendations should indicate to the user that 
 
@@ -56,7 +59,7 @@ At the moment languages are represented as 1-to-many. This is because instead of
 #### User
 ![user CRUD actions](/project_code/img/public/user_collection_actions.png)
   
-__Saved Controller Actions__
+#### Saved Controller Actions
 ![saved CRUD actions](/project_code/img/public/saved_controller_actions.png)
 
 ### Security and Scalability
