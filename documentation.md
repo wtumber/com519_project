@@ -71,7 +71,7 @@ The images below show the interaction process between the models, controllers, a
 ### Security and Scalability
 I have locked down routes to add guides, add recommenders, and view saved resources.
 A user must create an account with a unique username and password before account creation is completed.
-User passwords hashed with bcrypt for 10 rounds before they are stored in the database. I have required that passwords are 4-14 characters in length for additional security.
+User passwords are hashed with bcrypt for 10 rounds before they are stored in the database. I have required that passwords are 4-14 characters in length for additional security.
 
 ### Challenges, issues, and bugs
 I faced several challenges during development, given below: 
