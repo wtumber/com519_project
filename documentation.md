@@ -30,13 +30,13 @@ Many large organisations moved away from DataCamp causing them to seek alternati
 
 The diagram below represents the database seeding process.
 
-![Database seeding diagram](/project_code/img/public/database_seeding.PNG)
+![Database seeding diagram](/project_code/img/public/database_seeding.png)
 
 ### Database design
 The database follows the Data Model Design identified by MongoDB as ["Normalized Data Models"](https://docs.mongodb.com/manual/core/data-model-design/). This would enable me to represent complex many-to-many relationships in the future while decreasing the quantity of duplicate information in the database.
 
 #### **Database ERD**
-![Database ERD](/project_code/img/public/database_erd.PNG)
+![Database ERD](/project_code/img/public/database_erd.png)
 
 One _Recommender_ can make many (or no) recommendations , however one _Guide_ can only have one _Recommender_. This is because each guide is a single recommendation, and so when someone else recommends that same guide, a new _Guide_ is created. This is important because the new _Recommender_ may hold a different opinion regarding the _Guide_ content which is important to show but should not take precedent over the previous information. Additionally, repeat recommendations should indicate to the user that 
 
@@ -45,18 +45,19 @@ At the moment languages are represented as 1-to-many. This is because instead of
 #### **Database interactions**
 
 #### Recommender
-![recommender CRUD actions](/project_code/img/public/recommender_collection_actions.PNG)
+![recommender CRUD actions](/project_code/img/public/recommender_collection_actions.png)
 
 #### Guide
-![guide CRUD actions](/project_code/img/public/guide_collection_actions.PNG)
+![guide CRUD actions](/project_code/img/public/guide_collection_actions.png)
 
 #### Home
-![home CRUD actions](/project_code/img/public/home_controller_actions.PNG)
+![home CRUD actions](/project_code/img/public/home_controller_actions.png)
 
 #### User
-![user CRUD actions](/project_code/img/public/user_collection_actions.PNG)
+![user CRUD actions](/project_code/img/public/user_collection_actions.png)
+  
 __Saved Controller Actions__
-![saved CRUD actions](/project_code/img/public/saved_controller_actions.PNG)
+![saved CRUD actions](/project_code/img/public/saved_controller_actions.png)
 
 ### Security and Scalability
 I have locked down routes to add guides, add recommenders, and view saved resources.
