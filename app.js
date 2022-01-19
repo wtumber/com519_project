@@ -78,7 +78,6 @@ app.get("/add-guide", authMiddleware, guidesController.createView, (req, res) =>
 app.post("/add-guide", guidesController.create);
 
 
-//app.get("/update/:id", guidesController.edit); Attempt to provide errors to update-guide
 app.get("/update/:id",guidesController.edit, (req, res) => {
   res.render('update-guide', { errors: {} })
 });
