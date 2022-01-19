@@ -76,7 +76,7 @@ User passwords hashed with bcrypt for 10 rounds before they are stored in the da
 ### Challenges, issues, and bugs
 I faced several challenges during development, given below: 
 * Upsert: I had issues with upsert, the solution to which appeared to be adding a component to `Retry`. This seemed an unelegant solution, so I instead opted to manually query the database for the Id to ascertain whether to update or create.
-* `unique: true` gives an `UnhandledPromiseRejectionWarning`. This was an issue relating to creating a new user, and seemed to exist even in the db-starter-project. My solution is similar to the of the previous issue; `.find({username:req.body.username})`, and if already exists raise an error.
+* `unique: true` gives an `UnhandledPromiseRejectionWarning`. This was an issue relating to creating a new user, and seemed to exist even in the db-starter-project. MongoDB also recognises username and password as [unique indices](/project_code/img/public/users_indices.png), making this a difficult issue to resolve. My solution is similar to the of the previous issue; `.find({username:req.body.username})`, and if already exists raise an error.
 * I had issues when implementing searching due to an `unknown language error` when creating a text index. I resolved this issue by creating the text index during seeding, using the following code (in seeder.js) to override the default language behaviour:
 ```js
 await db.collection("guides").createIndex(
