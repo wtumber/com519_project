@@ -46,9 +46,7 @@ The general flow of the app is as follows:
 
 I used the bootstrap [blog](https://getbootstrap.com/docs/4.0/examples/blog/) template as a starting point for this application and have used the bootstrap [glyphicon SVGs](https://icons.getbootstrap.com/) to give the application a better look. I created the data (guides.json) using Python lists which I combined with the `json` package. These lists were written manually, and are based on open tutorials I found in November 2021. I seeded the database using this guides.json, the process for which is shown below. 
 
-![Database seeding diagram](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/database_seeding.png){width=65%}
-
-\newpage
+<img src="/project_code/img/public/database_seeding.png" width="500">
 
 #### **Database ERD**
 
@@ -56,22 +54,20 @@ One _Recommender_ can make many (or no) recommendations, but one _Guide_ can onl
   
 At the moment languages are represented as a 1-to-many relationship. This is because there is a language called "Multiple" which indicates that a _Guide_ includes multiple languages. Updating this to a many-to-many relationship would be part of the process of improving the application beyond a proof of concept.
 
-![Database ERD](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/database_erd.png){width=40%} 
+<img src="/project_code/img/public/database_erd.png" width="350">
 
 #### **Database interactions**
 The images below show the interaction process between the models, controllers, and application layer for each controller.
 
-![recommender CRUD actions](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/recommender_collection_actions.png){width=50%}
+<img src="/project_code/img/public/recommender_collection_actions.png" width="500">
 
-![saved CRUD actions](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/saved_controller_actions.png){width=50%}
+<img src="/project_code/img/public/saved_controller_actions.png" width="500">
 
-![guide CRUD actions](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/guide_collection_actions.png){width=50%}
+<img src="/project_code/img/public/guide_collection_actions.png" width="500">
 
-![home CRUD actions](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/home_controller_actions.png){width=50%}
+<img src="/project_code/img/public/home_controller_actions.png" width="500">
 
-![user CRUD actions](C:\Users\ISA06006086\Documents\University\com519\project/project_code/img/public/user_collection_actions.png){width=50%}
-
-\newpage
+<img src="/project_code/img/public/user_collection_actions.png" width="500"> 
 
 ### Security and Scalability
 To prevent errors when testing features I have created production and development versions of the database, meaning I can test future implementations before rolling them out. 
