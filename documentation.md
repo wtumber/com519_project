@@ -32,6 +32,7 @@ The diagram below represents the database seeding process.
 
 <!--![Database seeding diagram](/project_code/img/public/database_seeding.png)-->
 <img src="/project_code/img/public/database_seeding.png" width="500">
+
 ### Database design
 The database follows the Data Model Design identified by MongoDB as ["Normalized Data Models"](https://docs.mongodb.com/manual/core/data-model-design/). This would enable me to represent complex many-to-many relationships in the future while decreasing the quantity of duplicate information in the database.
 
@@ -39,38 +40,38 @@ I used the bootstrap [blog](https://getbootstrap.com/docs/4.0/examples/blog/) te
 
 #### **Database ERD**
 <!--![Database ERD](/project_code/img/public/database_erd.png)-->
-<img src="/project_code/img/public/database_erd.png" width="500">
+<img src="/project_code/img/public/database_erd.png" width="350">
 
-One _Recommender_ can make many (or no) recommendations , however one _Guide_ can only have one _Recommender_. This is because each guide is a single recommendation, and so when someone else recommends that same guide, a new _Guide_ is created. This is important because the new _Recommender_ may hold a different opinion regarding the _Guide_ content which is important to show but should not take precedent over the previous information. Additionally, repeat recommendations should indicate to the user that 
+One _Recommender_ can make many (or no) recommendations , however one _Guide_ can only have one _Recommender_. This is because each guide is a single recommendation, and so when someone else recommends that same guide, a new _Guide_ is created. This is important because the new _Recommender_ may hold a different opinion regarding the _Guide_ content which is important to show but should not take precedent over the previous information. Additionally, repeat recommendations should indicate to the user that the guide is a worthwhile time investment.
 
-At the moment languages are represented as 1-to-many. This is because instead of adding multiple languages there is instead a language called "Multiple". Updating this to a many-to-many relationship would be part of improving the application beyond a proof of concept.
+At the moment languages are represented as 1-to-many. This is because there is a language called "Multiple" which indicates that a _Guide_ includes multiple languages. Updating this to a many-to-many relationship would be part of the process to improve the application beyond a proof of concept.
 
 #### **Database interactions**
-
+The images below show the interaction process between the models, controllers, and application layer for each controller.
 #### Recommender
 <!--![recommender CRUD actions](/project_code/img/public/recommender_collection_actions.png)-->
 <img src="/project_code/img/public/recommender_collection_actions.png" width="500">
+
 #### Guide
 <!--![guide CRUD actions](/project_code/img/public/guide_collection_actions.png)-->
 <img src="/project_code/img/public/guide_collection_actions.png" width="500">
+
 #### Home
 <!--![home CRUD actions](/project_code/img/public/home_controller_actions.png)-->
 <img src="/project_code/img/public/home_controller_actions.png" width="500">
+
 #### User
 <!--![user CRUD actions](/project_code/img/public/user_collection_actions.png)-->
  <img src="/project_code/img/public/user_collection_actions.png" width="500"> 
+
 #### Saved Controller Actions
 <!--![saved CRUD actions](/project_code/img/public/saved_controller_actions.png)-->
 <img src="/project_code/img/public/saved_controller_actions.png" width="500">
+
 ### Security and Scalability
 I have locked down routes to add guides, add recommenders, and view saved resources.
 A user must create an account with a unique username and password before account creation is completed.
 User passwords hashed with bcrypt for 10 rounds before they are stored in the database. I have required that passwords are 4-14 characters in length for additional security.
-
-#### **Future Iterations of Dambry**
-Future iterations of the application and updates must include updates to the recommenders collection. Ideally, a recommender group should have the opportunity to be private or invite only, with an administrator of the recommender group to control access.
-
-As with all social sites, Dambry would be susceptible to shameless [self-promotion tactics](https://kenji.ai/). It is for this reason that I envisioned Dambry to be an internal application for an organisation. A large, multi-disciplinary organisation could use the site to promote both internal and external resources which they recommend to upskill staff. In this example, a recommender could be a team within an organisation that is highly specialised but looking to enable learning on a larger scale.
 
 ### Challenges, issues, and bugs
 I faced several challenges during development, given below: 
@@ -91,6 +92,10 @@ await db.collection("guides").createIndex(
 * Visiting any update/:id page returns the error `blog.css cannot be applied`. This means blog.css does not get applied to update-guide.ejs, however the page still functions as normal.
 * Heroku did not recognise the buildpack for this project. In this case the fix was to simply define the buildpack manually using `heroku buildpacks:set heroku/nodejs`.
 
+### **Future Iterations of Dambry**
+Future iterations of the application and updates must include updates to the recommenders collection. Ideally, a recommender group should have the opportunity to be private or invite only, with an administrator of the recommender group to control access.
+
+As with all social sites, Dambry would be susceptible to shameless [self-promotion tactics](https://kenji.ai/). It is for this reason that I envisioned Dambry to be an internal application for an organisation. A large, multi-disciplinary organisation could use the site to promote both internal and external resources which they recommend to upskill staff. In this example, a recommender could be a team within an organisation that is highly specialised but looking to enable learning on a larger scale.
 
 ## Conclusions and reflection
 One issue which I had not anticipated was following naming conventions. I was developing in R and Python concurrently during this project, and therefore I notice that at times I have inadvertently used a mixture of camelCase, BigCamelCase (as with R), and snake_case (as with Python).
