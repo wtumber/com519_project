@@ -1,6 +1,6 @@
 # Dambry
 
-Advanced Database Systems project for Solent University module COM517.
+Advanced Database Systems project for Solent University module COM519.
 
 ---
 
