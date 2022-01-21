@@ -1,7 +1,7 @@
 # Dambry
 
 Advanced Database Systems project for Solent University module COM519.  
-This repository is linked via webhook to an [live version of the app](https://shielded-fortress-22361.herokuapp.com/), deployed with Heroku.
+This repository is linked via webhook to a [live version of the app](https://shielded-fortress-22361.herokuapp.com/), deployed with Heroku.
 
 
 ---
